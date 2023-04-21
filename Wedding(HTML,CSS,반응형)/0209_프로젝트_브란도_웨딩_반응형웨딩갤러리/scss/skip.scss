@@ -1,0 +1,21 @@
+#wrap{
+    #skip {
+    position: fixed; top: 0; left: 0; width: 100%;
+    li{
+        width: 100%; font-size: 0;
+        a{
+            display: block; 
+            width: 100%;
+            line-height: 0; 
+            font-size: 0; 
+            color:#ffffff;
+            text-align: center;
+            background: #000;
+            &:focus{
+                line-height: 50px; 
+                font-size: 20px;
+            }
+        }
+     }
+  }
+}

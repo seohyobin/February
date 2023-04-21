@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    
+
+</head>
+<body>
+<div id="root">
+    <div id="wrap">
+        <h1>인라인 자바스크립트 경고창 실행</h1>
+        <ul>
+            <li><a class="link-btn" onclick="alert('딸깍!')" href="https://www.kurly.com/main" target="_self">마켓컬리</a></li>
+            <li><a class="link-btn" onclick="alert('딸깍!')" href="https://www.naver.com/" target="_blank">네이버</a></li>
+            <li><a class="link-btn" onclick="alert('딸깍!')" href="https://www.starbucks.co.kr/index.do" target="_blank">스타벅스</a></li>
+            <li><a class="link-btn" onclick="alert('딸깍!')" href="https://brando.themezaa.com/wedding/" target="_self">브란도웨딩</a></li>
+        </ul>
+        <hr>
+
+        <h1>인라인 자바스크립트 버큰 클릭 함수 호출 실행</h1>
+        <ul>
+            <li><a class="link-btn" onclick="fn1();" href="#">마켓컬리</a></li>
+            <li><a class="link-btn" onclick="fn2();" href="#">네이버</a></li>
+            <li><a class="link-btn" onclick="fn3();" href="#">스타벅스</a></li>
+            <li><a class="link-btn" onclick="fn4();" href="#">브란도웨딩</a></li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<h1>인라인 자바스크립트 버큰 클릭 함수 호출(전달인자 argument) 실행</h1>
+    <ul>
+        <li><a class="link-btn" onClick="func1('https://www.kurly.com/main');" href="#">마켓컬리</a></li>
+        <li><a class="link-btn" onClick="func1('https://www.naver.com/');" href="#">네이버</a></li>
+        <li><a class="link-btn" onClick="func1('https://www.starbucks.co.kr/index.do');" href="#">스타벅스</a></li>
+        <li><a class="link-btn" onClick="func1('https://brando.themezaa.com/wedding/');" href="#">브란도웨딩</a></li>
+    </ul>
+
+    <hr>
+      
+    <h1>자바스크립트 선택자 아이디 버튼 클릭 이벤트 구현</h1>
+
+    <span><a href="#" id="btn1">버튼1</a></span>
+
+
+    <script>
+        //함수 키워드:정해진 이름으로 우리는 사용하느 규칙 평션( function() )
+        //식별자: 사용자가 지은 이름
+        // ex.1 function fn1() {}
+        //1.function : 키워드(정해진이름), 자바스크립트 개발자가 미리정해서 사용하는 이름
+        //2.fn1 : 식별자 , 사용자가 지은 이름
+        //3-1.('전달인자' 'argument') : 함수를 지정하거나 호출할때 사용되는 '전달인자'를 괄호안에 사용한다.
+        //3-2.('매개변수' 'parmeter') : 함수를 지정하거나 호출할때 사용되는 '매개변수'를 괄호안에 사용한다.
+        //4.{} : 함수의 범위(range->scope) 
+    
+        function fn1(){
+            alert('함수1 호출');
+            //특정한 웹주소로 이동할 때 사용 로케이션 href='URL' :_self
+            location.href ='https://www.kurly.com/main';
+        }
+        function fn2(){
+            alert('함수2 호출');
+            //새창을 열고 주소 띄운다. : _blank
+            window.open('https://www.naver.com/');
+        }
+        function fn3(){//_blank
+            alert('함수3 호출'); 
+            window.open('https://www.starbucks.co.kr/index.do','스타벅스창','width=500 , height=500 , top=234.5 , left=701.5');
+        }
+        function fn4(){
+            alert('함수4 호출');//_self
+            location.href ='https://brando.themezaa.com/wedding/';
+        }
+    
+        ////////////////////////////////////////////////////////////////////////
+        //함수에서 argument 전달인자 보내고 parmeter로 받아서 함수 실행하기
+        ////////////////////////////////////////////////////////////////////////
+        function func1(pa){
+            //4개의 다양한 웹주소가 들어온다.
+            alert('웹주소 URL : ' + pa );
+            console. log( pa ) //오류가 없는지 확인
+            //location.href = pa;
+            window.open( pa )
+        }
+        ////////////////////////////////////////////////////////////////////////
+        //돔요소->*웹문서 전체에서 아이디를 찾아) (HTML) 아이디 선택자 버튼 클릭 이벤트
+        ////////////////////////////////////////////////////////////////////////
+        //document.getElementById('btn1').onclick = 실행할 내용을 콜백함수(){}
+        // document.getElementById('btn1').onclick = function(){
+        //     alert('버튼클릭이벤트!!!');
+        // }
+        // document.getElementById('btn2').onclick = function(){
+        //     alert('버튼2번');
+        // }
+        // document.getElementById('btn3').onclick = function(){
+        //     alert('버튼3번');
+        // }
+        // document.getElementById('btn4').onclick = function(){
+        //     alert('버튼4번');
+        // }
+        //이크마 스크립트 5 ECMA Script 5 => ES5
+        //var btn = document.getElementById('btn1');
+        //2015스크립트 / 이크마스크립트 6 ECMA script 6 => ES6 ES NEXT
+        //const 키워드는 불변 변수를 지정시 사용한다. 절대 변경 안하고 사용되는 변수, 재선언 불가하다
+        //let 키워드는 가변 변수를 지정시 사용한다. 변경 가능한 변수
+        //let btn1 = document.getElementById('btn1');
+        //버튼선택자.onclick = function (){}
+        //btn1.onclick = function(){
+    
+            //선택자 
+        const btn1 = document.getElementById('btn1');
+        let cnt = 0; //가변 변수
+        //var btn1 = document.getElementById('btn1');
+        // btn1.onclick = function(){
+        //     cnt++; //1씩 증가
+        //     alert('클릭!!' + cnt)
+        // }
+    
+    
+        //이벤트 리스너 사용하시
+        //btn1.addEventListener('이벤트',function(){});
+        btn1.addEventListener('click' , function(event){
+            event.preventDefault();  //a링크는 본래 기능-> 새로고침 현상 삭제
+            //cnt++; //cnt=cnt+1; => cnt+=1; => cnt++
+            //cnt+=2;//cnt=cnt+2; =>cnt+=2;
+            //cnt+=10;//cnt=cnt+10; =>cnt+=10;
+            //cnt+=5;//cnt=cnt+2; =>cnt+=2;
+    
+            //cnt--;
+            //cnt-=1;
+            // cnt-=2;
+    
+            // mul= 1 * 6;
+            // mul= 5 * 10;
+            // div= 5 / 2;
+            // div= 5 / 8;
+    
+            // mod = 5 % 2; //나머지 1  나눈 후  나머지
+            // mod = 5 % 3; //나머지 2
+            cnt++;
+    
+    
+            console.log( cnt );
+    
+        });
+    
+    
+    </script>
+
+
+
+    <hr>
+
+    <h1>메인 슬라이드 버튼 클릭 이벤트리스너 좌우이동 슬라이드</h1>
+
+    <div class="slide-container">
+        <div class="slide-view">
+            <ul class="slide-wrap" id="slideWrap">  
+                <li class="sldie slide1"><img src="./img/wedding-img1.jpg" alt=""></li>
+                <li class="sldie slide2"><img src="./img/wedding-img2.jpg" alt=""></li>
+                <li class="sldie slide3"><img src="./img/wedding-img3.jpg" alt=""></li>
+                <li class="sldie slide1" class="first"><img src="./img/wedding-img1.jpg" alt=""></li>
+            </ul>
+        </div>
+        <span >
+        <a href="#"id="prev-btn">이전슬라이드</a>
+        <a href="#"id="next-btn">다음슬라이드</a>
+        </span>
+    </div>
+  </div>
+</div>
+
+<script>
+
+//버튼 선택자 불변 변수 선언
+    
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const slideWrap = document.getElementById('slideWrap');
+let t = 0;//카운트변수선언, 두번 선언 불가
+//이전 슬라이드 버튼 이벤트 등록
+prevBtn.addEventListener('click' , function(e){
+    e.preventDefault();
+    t--;
+    //slideWrap.style = "transform: translateX("+-1903*t+"px)";
+    slideWrap.style = `transform: translateX(${-1903*t}px)`;
+    console.log(slideWrap.style.transform);
+    });
+
+
+//이벤트 중 슬라이드랩퍼박스의 트랜지션이 끝났을 때 포지션을 보여달라
+
+//slideWrap.addEventListener('트랜지션끝', function(){});
+slideWrap.addEventListener('transitionend', function(){
+    console.log(slideWrap.style.transform);
+});
+
+//다음 슬라이드 버튼 이벤트 등록
+
+nextBtn.addEventListener('click' , function(e){
+    e.preventDefault();
+    t++;
+    slideWrap.style = `transform: translateX(${-1903*t}px)`;
+    });
+
+</script>
+
+    
+</body>
+</html>

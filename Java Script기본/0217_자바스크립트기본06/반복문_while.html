@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 while</title>
+</head>
+<body>
+    <h1>반복문 while</h1>
+    <script>
+        'use strict'
+
+        //와일문은 어떠한 조건이 참이면 실행 거짓이면 종료
+        // while(조건){
+        //     스코프(scope)
+        // }
+
+        //조건부 연산자 &&
+        //3항 연산자 조건 숫자%2===0 ? 참: 거짓
+        //if(){} 
+        //if(){}else{}  
+        //if(){}else if{}
+        //if(){}else if{}if(){}else if{}if(){}else if{}if(){}else if{}else(){}
+
+
+        const obj={
+            init(){
+                this.while_1();
+            },
+            while_1(){
+                //실습1
+                //1~10까지 1씩 증가하는 반복문을 while로 구현
+                let i=0;
+                let j=0;
+                while(i<10){ //10<10 종료 false
+                    i++;//1 2 3 4 ...10(디버깅 과정)
+                    console.log(i);
+                }
+                i=0;
+                while(i<10){ //10<10 종료 false
+                    i++;//1 2 3 4 ...10(디버깅 과정)
+                    //짝수만 출력해 =>even i를 2로 나누어서 나머지가 0인수! ->짝수
+                    //짝수이벤트
+
+                    console.log('Even :' , i%2===0 ? i : ''); 
+
+                }
+                i=0;
+                while(i<10){ //10<10 종료 false
+                    i++;//1 2 3 4 ...10(디버깅 과정)
+                    //짝수만 출력해 =>even i를 2로 나누어서 나머지가 0인수! ->짝수
+                    //짝수이벤트
+                    //조건부연산자(&&)
+
+                    console.log('Even :' , i%2===0 && i );
+
+                }
+                
+                i=0;
+                while(i<10){ //10<10 종료 false
+                    i++;//1 2 3 4 ...10(디버깅 과정)
+                    //짝수만 출력해 =>even i를 2로 나누어서 나머지가 0인수! ->짝수
+                    //짝수이벤트
+                    //조건부연산자(&&)
+                    if(i%2===0){
+                        console.log('Even :' , i);
+                    }
+                    else{
+                        console.log('Odd :' , i );
+                    }
+                    
+
+                }
+
+                i=0;
+                while(i<100){
+                    i++;
+                    if(i%5===0 ){//i를 5로나누어 나머지가 0이면 5의배수
+                        console.log('5의배수',i)
+                    }
+                    else if(i%3===0){
+                        console.log('3의배수',i)
+                    }
+                    else if(i%4===0){
+                        console.log('4의배수',i)
+                    }
+                    else if(i%7===0){
+                        console.log('7의배수',i)
+                    }
+                    else{
+                        console.log('그 외 숫자',i)
+                    }
+                }
+                //and 조건->모두만족 그리고 , ~이고 , ~이면서
+                //3의배수 이면서(이고) 5의배수
+                //3의배수 and(&&) 5의 배수
+                console.log('3의 배수이면서 5의 배수');
+                i=0;
+                while(i<100){
+                    i++;
+                    if(i%3===0 && i%5===0){
+                        console.log(i)
+                    }
+                }
+
+                //Or 조건->어느것 하나만 만족해도 만족 또는, ~이거나
+                //3의배수 이거나 5의배수
+                //3의배수 Or(||) 5의 배수
+                console.log('3의 배수이거나(또는) 5의 배수');
+                i=0;
+                while(i<100){
+                    i++;
+                    if(i%3===0 || i%5===0){
+                        console.log(i)
+                    }
+                }
+                //Not 조건->부정 ~아닌것만 출력
+                //!3의배수가 아니거나(!)  !5의배수가 아닌것
+                //!3의배수 Or(||) !5의 배수
+                
+                console.log('3의 배수가 아니거나 5의 배수가 아닌것');
+                i=0;
+                while(i<100){
+                    i++;
+                    if(i%3!==0 || i%5!==0){
+                        console.log(i)
+                    }
+                }
+                //Not 조건->부정 ~아닌것만 출력
+                //!3의배수가 아니고(!)  !5의배수가 아닌것
+                //!3의배수  and(&&) !5의 배수
+                
+                console.log('3의 배수가 아니고 5의 배수가 아닌것');
+                i=0;
+                while(i<100){
+                    i++;
+                    if(i%3!==0 && i%5!==0){
+                        console.log(i)
+                    }
+                }
+                  //Not 조건->부정 ~아닌것만 출력
+                //!2의배수 아니고 !3의배수가 아니고(!)  !5의배수가 아닌것
+                //!2의배수 (&&)!3의배수  and(&&) !5의 배수 아닌것
+                
+                console.log('2,3,5의 배수가 아닌것');
+                i=0;
+                while(i<100){
+                    i++;
+                    if(i%2!==0 && i%3!==0 && i%5!==0){
+                        console.log(i)
+                    }
+                }
+                
+                //다중와일문
+                console.log('j 초기화 작업 전 결과');
+                i=0;
+                j=0;
+                while(i<5){
+                    i++;//i=1
+                  //j 초기화 안해서 i값이 1인경우만 수행
+                    while(j<5){
+                        j++;//j=1
+                        console.log(`i=${i},j=${j}`);
+                    }
+                }
+                console.log('j 초기화 작업 후 결과');
+                i=0;
+                j=0;
+                let cnt=0;
+                while(i<5){
+                    i++;//i=1
+                    j=0;//j 초기화 하면 다 수행
+                    while(j<5){
+                        cnt++;
+                        j++;//j=1
+                        console.log(cnt,`i=${i},j=${j}`);
+                    }
+                }
+            }
+        }
+        obj.init();
+
+    </script>
+</body>
+</html>

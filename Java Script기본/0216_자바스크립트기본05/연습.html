@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        //1.
+        for(let i=1; i<=9; i++){
+            console.log(`${5}*${i}=${5*i}`);
+        }
+
+        //2.2~9단 다중 FOR문 단과 증가값 I,J
+
+        for(let i =2; i<=9; i++ ){//2,3단....9단
+            console.log(``);
+            console.log(`  ${i} 단 `);
+            for(let j =1; j<=9; j++){//1 ... 9
+                console.log(`${i} * ${j} =${i * j< 10 ? `0${i*j}`: i*j} `)
+            }
+        }
+
+
+     //3.2단 9단 가로출력
+     
+     let txt='';
+
+     for(let i=1; i<=9; i++){
+            for(let j=2; j<=9; j++){
+                txt += `${j}*${i} = ${j*i<10 ? `0${i*j}`: i*j}    `;
+            }
+        txt+= `\n`
+     }
+
+     console.log(txt);
+
+
+
+     //4.증가값 배열에 저장하기
+
+
+    let a=[];
+    let b=0;
+    </script>
+</body>
+</html>

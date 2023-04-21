@@ -1,0 +1,449 @@
+@import url("./fonts.css");
+@import url("./reset.css");
+@import url("./skip.css");
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+#wrap #header {
+  width: 100%;
+  height: 86px;
+  background: #93e4cf;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+#wrap #header .container {
+  width: 100%;
+  max-width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+}
+#wrap #header .container .gap {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  padding: 0 15px;
+}
+#wrap #header .container .gap .left {
+  width: 38%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+}
+#wrap #header .container .gap .left ul {
+  display: flex;
+  margin: 0 30px 0 0;
+}
+#wrap #header .container .gap .left ul li {
+  margin: 0 0 0 30px;
+}
+#wrap #header .container .gap .left ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2e443f;
+}
+#wrap #header .container .gap .left ul li a:focus {
+  color: #d32b55;
+}
+#wrap #header .container .gap .left ul li a:hover {
+  color: #d32b55;
+}
+#wrap #header .container .gap .center {
+  width: 24%;
+  height: 100%;
+}
+#wrap #header .container .gap .center a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: url(../img/logo-pink2.png) no-repeat 50% 50%;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#wrap #header .container .gap .right {
+  width: 38%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+#wrap #header .container .gap .right ul {
+  display: flex;
+  margin: 0 0 0 30px;
+}
+#wrap #header .container .gap .right ul li {
+  display: flex;
+  margin: 0 30px 0 0;
+}
+#wrap #header .container .gap .right ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2e443f;
+}
+#wrap #header .container .gap .right ul li a:focus {
+  color: #d32b55;
+}
+#wrap #header .container .gap .right ul li a:hover {
+  color: #d32b55;
+}
+#wrap #main {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+#wrap #main #section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/wedding-img3.jpg) no-repeat 50% 50%;
+}
+#wrap #main #section1:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 37, 37, 0.37);
+  z-index: 1;
+}
+#wrap #main #section1 .container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 100%;
+}
+#wrap #main #section1 .container .gap {
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrap #main #section1 .container .gap .title {
+  z-index: 2;
+  width: 307px;
+  position: relative;
+  text-align: center;
+  width: 307px;
+}
+#wrap #main #section1 .container .gap .title figure img {
+  width: 100%;
+}
+#wrap #main #section1 .container .gap .title hr {
+  border-top: 1px solid #93e4cf;
+  border-bottom: 1px solid #93e4cf;
+  width: 100%;
+  height: 4px;
+  margin: 40px 0;
+}
+#wrap #main #section1 .container .gap .title h3 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  padding: 0 0 7px 0;
+}
+#wrap #main #section1 .container .gap .title h2 {
+  font-size: 24px;
+  color: #85d4c0;
+  font-weight: 700;
+}
+#wrap #main #section2 {
+  width: 100%;
+  height: 711.875px;
+  padding: 130px 0;
+  background: #fff;
+}
+#wrap #main #section3 {
+  width: 100%;
+  height: 346px;
+  background: url(../img/wedding-img2.jpg) no-repeat 50% 50% fixed;
+  background-size: 100% auto;
+  position: relative;
+}
+#wrap #main #section3::before {
+  content: "";
+  background-color: rgba(37, 37, 37, 0.5);
+  width: 100%;
+  height: 346px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+#wrap #main #section3 .container {
+  width: 100%;
+  max-width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+#wrap #main #section3 .container .gap {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+}
+#wrap #main #section3 .container .gap .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrap #main #section3 .container .gap .content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #85d4c0;
+}
+#wrap #main #section4 {
+  width: 100%;
+  padding: 130px 0;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+#wrap #main #section4 .container {
+  width: 1170px;
+  margin: 0 auto;
+}
+#wrap #main #section4 .container > .gap {
+  width: 100%;
+}
+#wrap #main #section4 .container > .gap .title {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 90px 0;
+}
+#wrap #main #section4 .container > .gap .title h2 {
+  font-size: 24px;
+  color: #e15276;
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+}
+#wrap #main #section4 .container > .gap .title h2::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  margin: -0.5px 0 0 0;
+  width: 40px;
+  height: 1px;
+  background-color: #93e4cf;
+}
+#wrap #main #section4 .container > .gap .title h2::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  margin: -0.5px 0 0 0;
+  width: 40px;
+  height: 1px;
+  background-color: #93e4cf;
+}
+#wrap #main #section4 .container .content {
+  width: 100%;
+}
+#wrap #main #section4 .container .content ul {
+  width: 100%;
+  display: flex;
+}
+#wrap #main #section4 .container .content ul li {
+  width: 33.33333%;
+}
+#wrap #main #section4 .container .content ul li .col-gap {
+  width: 100%;
+  padding: 0 15px;
+  text-align: center;
+}
+#wrap #main #section4 .container .content ul li .col-gap .box {
+  border: 5px solid #eee;
+  width: 100%;
+}
+#wrap #main #section4 .container .content ul li .col-gap .box .gap {
+  width: 100%;
+  padding: 35px 60px;
+}
+#wrap #main #section4 .container .content ul li .col-gap .box .gap h2 {
+  padding: 0 0 15px 0;
+}
+#wrap #main #section4 .container .content ul li .col-gap .box .gap h2 i {
+  font-size: 60px;
+  color: #85d4c0;
+}
+#wrap #main #section4 .container .content ul li .col-gap .box .gap h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #626262;
+}
+#wrap #main #section4 .container .content ul li .col-gap .box .gap hr {
+  border: 0;
+  background: #ccc;
+  height: 1px;
+  margin: 25px 0;
+  width: 100%;
+}
+#wrap #main #section4 .container .content ul li .col-gap .box .gap p {
+  padding: 0 0 10px 0;
+  color: #929292;
+  font-size: 13px;
+}
+#wrap #main #section4 .container .content ul li .col-gap .box .gap h4 {
+  color: #929292;
+  font-size: 13px;
+  font-weight: 500;
+}
+#wrap #section5 {
+  width: 100%;
+  padding: 130px 0;
+  background: #fff;
+}
+#wrap #section5 .container {
+  width: 100%;
+  max-width: 1170px;
+  width: 1170px;
+  margin: 0 auto;
+}
+#wrap #section5 .container .gap {
+  width: 100%;
+}
+#wrap #section5 .container .gap .title {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 90px 0;
+}
+#wrap #section5 .container .gap .title h2 {
+  font-size: 24px;
+  color: #e15276;
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+}
+#wrap #section5 .container .gap .title h2::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  margin: -0.5px 0 0 0;
+  width: 40px;
+  height: 1px;
+  background-color: #93e4cf;
+}
+#wrap #section5 .container .gap .title h2::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  margin: -0.5px 0 0 0;
+  width: 40px;
+  height: 1px;
+  background-color: #93e4cf;
+}
+#wrap #section5 .container .content {
+  width: 100%;
+  overflow: hidden;
+}
+#wrap #section5 .container .content .gallery-box {
+  width: 1181px;
+  margin: 0 0 0 -11px;
+}
+#wrap #section5 .container .content .gallery-box ul {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+#wrap #section5 .container .content .gallery-box ul li {
+  width: 25%;
+}
+#wrap #section5 .container .content .gallery-box ul li .col-gap {
+  overflow: hidden;
+  width: auto;
+  margin: 0 0 11px 11px;
+}
+#wrap #section5 .container .content .gallery-box ul li .col-gap a {
+  display: block;
+  width: 100%;
+}
+#wrap #section5 .container .content .gallery-box ul li .col-gap a figure {
+  width: 100%;
+}
+#wrap #section5 .container .content .gallery-box ul li .col-gap a figure img {
+  width: 100%;
+  transition: all 0.3s;
+}
+#wrap #section5 .container .content .gallery-box ul li .col-gap a figure img:hover {
+  transform: scale(1.1);
+  opacity: 0.3;
+  cursor: url(../img/icon-zoom.png), auto;
+}
+
+#section6 {
+  position: relative;
+  width: 100%;
+  height: 760px;
+  background: url(../img/wedding-img16.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  padding: 130px 0;
+}
+#section6::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 37, 37, 0.5);
+  z-index: 1;
+}
+
+#section7 {
+  width: 100%;
+  height: 599.375px;
+  background: #fff;
+  padding: 130px 0;
+}
+
+#section8 {
+  width: 100%;
+  height: 935.25px;
+  background: #f7f7f7;
+  padding: 130px 0;
+}
+
+#section9 {
+  width: 100%;
+  height: 874.594px;
+  background: #fff;
+  padding: 130px 0;
+}
+
+#section10 {
+  width: 100%;
+  height: 504.375px;
+  background: #fff;
+  padding: 130px 0 0 0;
+}
+
+#section11 {
+  width: 100%;
+  height: 420px;
+  background: #fff;
+}
+#section11 iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#footer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 300px;
+  background: #dcdcdc;
+}

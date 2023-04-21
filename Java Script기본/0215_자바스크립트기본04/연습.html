@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+    
+</head>
+<body>
+    <script>
+        
+    'use strict'
+
+    const 함수1 = (pa1,pa2) =>{
+        console.log('함수1 내부 파라미타값 출력', pa1,pa2);
+    }
+    함수1(9,99);
+
+    const 함수2 =(pa)=>{
+        return pa +250;
+    } 
+    console.log('함수밖에서 결과출력',함수2(9));
+
+
+    const 함수3=(pa) =>pa + 500;
+    console.log('함수밖에서 결과출력', 함수3(659));
+
+
+
+    const obj1 = {상품코드:'t234s6',상품명:'귤',가격:2500}
+    function 상품(obj1){
+        console.log(obj1.상품코드);
+        console.log(obj1.상품명);
+        console.log(obj1.가격);
+    }
+    상품(obj1);
+
+
+    function 상품2(obj1){
+        const {상품코드,상품명,가격} = obj1;
+        console.log(상품코드);
+        console.log(상품명);
+        console.log(가격);
+    }
+    상품2(obj1);
+
+    const 상품3= ({상품코드, 상품명, 가격})=>{
+        console.log('매개변수에서 비구조화', 상품코드);
+        console.log('매개변수에서 비구조화', 상품명);
+        console.log('매개변수에서 비구조화', 가격);
+    }
+    상품3(obj1);
+
+
+    const arr=['딸기','수박','귤','복숭아'];
+
+    const result = arr.map((item)=>item==='복숭아');
+    console.log(result);
+
+    console.log(result.includes(true) ?'있어용' : '없어용');
+    </script>
+
+    
+</body>
+</html>

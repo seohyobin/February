@@ -1,0 +1,54 @@
+@import url("./fonts.css");
+@import url("./reset.css");
+@import url("./skip.css");
+#wrap {
+  width: 100%;
+}
+#wrap #header {
+  width: 100%;
+}
+#wrap #main {
+  width: 100%;
+}
+#wrap #main #designHotel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#wrap #main #designHotel .container {
+  width: 100%;
+}
+#wrap #main #designHotel .container .gap {
+  width: 100%;
+}
+#wrap #main #designHotel .container .gap .title {
+  width: 100%;
+}
+#wrap #main #designHotel .container .gap .content {
+  width: 100%;
+}
+#wrap #main #designHotel .container .gap .content #videoHotel {
+  width: 100%;
+}
+#wrap #main #designHotel .container .gap .content #videoHotel video {
+  width: 100%;
+}
+#wrap #main #designHotel2 {
+  padding: 130px 0;
+  width: 100%;
+}
+#wrap #main #designHotel2 .container {
+  width: 600px;
+  margin: 0 auto;
+}
+#wrap #main #designHotel2 .container .gap {
+  width: 100%;
+}
+#wrap #main #designHotel2 .container .gap .content {
+  width: 100%;
+}
+#wrap #main #designHotel2 .container .gap .content iframe {
+  width: 100%;
+  height: 337.5px;
+  border: 0;
+}

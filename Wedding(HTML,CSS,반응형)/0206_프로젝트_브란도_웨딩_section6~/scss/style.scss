@@ -1,0 +1,804 @@
+@import url('./fonts.css');
+@import url('./reset.css');
+@import url('./skip.css');
+
+// 중첩코딩
+#wrap {
+    width: 100%;
+    height: 100%;
+    #header {
+        width: 100%;
+        height: 86px;
+        background: #93e4cf;
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 3;
+        .container {
+            width: 100%;
+            max-width: 1170px;
+            height: 100%;
+            margin: 0 auto;
+            .gap {
+                width: 100%;
+                padding: 0 15px;
+                height: 100%;
+                display: flex;
+                .left {
+                    width: 38%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;    
+                    ul {
+                        display: flex;
+                        margin: 0 30px 0 0;
+                        li {
+                            margin: 0 0 0 30px;
+                            a {
+                                color:#626262;
+                                font-size: 13px;
+                                font-weight: 600;
+                                &:focus {
+                                    color:#d32b55;
+                                }
+                                &:hover {
+                                    color:#d32b55;
+                                }
+                                &.on {
+                                    color:#d32b55;
+                                }
+                            }
+                        }
+                    }
+                }
+                .center {
+                    width: 24%;
+                    height: 100%;
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        background: url(../img/logo-pink2.png) no-repeat 50% 50%;
+                        background-size: cover;
+                    }
+                }
+                .right {
+                    width: 38%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    ul {
+                        display: flex;
+                        margin: 0 0 0 30px;
+                        li {
+                            margin: 0 30px 0 0;
+                            a {
+                                color:#626262;
+                                font-size: 13px;
+                                font-weight: 600;
+                                &:focus {
+                                    color:#d32b55;
+                                }
+                                &:hover {
+                                    color:#d32b55;
+                                }
+                                &.on {
+                                    color:#d32b55;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #main {
+        z-index: 2;
+        position: relative;
+        width: 100%;
+        #section1 {
+            position: relative;
+            width: 100%;
+            height: 100vh;   //이거는 반드시 부모요소의 높이가 창높이로 잡혀있어야 적용된다.
+            // height: 100vh;
+            background: url(../img/wedding-img3.jpg) no-repeat 50% 50%;
+            &::before {
+              content:'';
+              z-index: 1;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(37, 37, 37, 0.4);
+              // opacity: 0.3;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 1170px;
+                margin: 0 auto;
+                height: 100%;
+                .gap {
+                    height: 100%;
+                    padding: 0 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    //타이틀
+                    .title {
+                        z-index: 2;
+                        position: relative;
+                        text-align: center;
+                        width: 307px;
+                        user-select: none;
+                        figure {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        hr {
+                            border-top: 1px solid #93e4cf;
+                            border-bottom: 1px solid #93e4cf;
+                            width: 100%;
+                            height: 4px;
+                            margin: 40px 0;
+                        }
+                        h3 {
+                            font-size: 18px;
+                            color:#fff;
+                            font-weight: 500;
+                            padding: 0 0 7px 0;
+                        }
+                        h2 {                            
+                            font-size: 24px;
+                            color:#85d4c0;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+        }
+        #section2 {
+            width:100%;
+            padding: 130px 0;
+            background: #fff;            
+            .container {
+                width:100%;
+                max-width:1170px;
+                margin: 0 auto;
+                .gap{
+                .title {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 0 90px 0;
+                    h2 {
+                        display: inline-block;
+                        font-size: 24px;
+                        color: #e15276; 
+                        position: relative;
+                        font-weight: 700;
+                        &::before{
+                            content:'';
+                            position: absolute;
+                            left: -60px;
+                            top: 50%;
+                            margin: -0.5px 0 0 0;
+                            width: 40px;
+                            height: 1px;
+                            background: #93e4cf;
+                        }                           
+                        &::after{
+                            content:'';
+                            position: absolute;
+                            right: -60px;
+                            top: 50%;
+                            margin: -0.5px 0 0 0;
+                            width: 40px;
+                            height: 1px;
+                            background: #93e4cf;
+                        }                           
+                    }
+                }
+                .content {
+                    width: 100%;
+                    display: flex;
+                    .left  {
+                        width: 50%;
+                        height: 350px;
+                        .content-box {
+                            width:100%;
+                            > ul {
+                                width:100%;
+                                display: flex;
+                                > li {
+                                    width:50%;
+                                    &.left-image {
+                                        width:100%;
+                                        > .gap {
+                                            padding: 0 15px;
+                                            .img-box {
+                                                width:100%;
+                                                figure {
+                                                    width:100%;
+                                                    img {
+                                                        width:100%;
+                                                        outline: 4px solid rgba(255,255,255, 0.3);
+                                                        outline-offset: -15px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.left-text  {
+                                        width:100%;
+                                        .gap {
+                                            padding: 0 15px;
+                                            .text-box {
+                                                width:100%;
+                                                ul {
+                                                    width:100%;
+                                                    li {
+                                                        text-align: left;
+                                                        width:80%;
+                                                        h2 {
+                                                            padding:0 0 10px 0;
+                                                            i {
+                                                                font-size: 40px;
+                                                                color:#85d4c0;
+                                                            }
+                                                        }
+                                                        h3 {
+                                                            font-size: 18px;font-weight: 700; color:#85d4c0;
+                                                            line-height: 130%;letter-spacing: -0.3px;
+                                                        }
+                                                        h4 {
+                                                            font-size: 13px;font-weight: 600;
+                                                            padding: 20px 0;
+                                                        }
+                                                        p {
+                                                            font-size: 13px;font-family: 'Roboto';
+                                                            line-height: 170%;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .icon-box {
+                            user-select: none;
+                            display: flex;
+                            width:100%;
+                            padding: 30px 0 0 0;
+                            text-align: center;
+                            .left  {
+                                width:50%;   
+                                a {
+                                    margin: 0 10px;
+                                    color:#333;                                    
+                                    i {
+                                        font-size: 14px;
+                                    }
+                                }                             
+                            } 
+                            .right {
+                                width:50%;
+                            } 
+                        }
+                    }
+                    .right {
+                        width: 50%;
+                        height: 350px;
+                        .content-box {
+                            width:100%;
+                            > ul {
+                                width:100%;
+                                display: flex;
+                                > li {
+                                    width:50%;
+                                    &.left-image {
+                                        width:100%;
+                                        > .gap {
+                                            padding: 0 15px;
+                                            .img-box {
+                                                width:100%;
+                                                figure {
+                                                    width:100%;
+                                                    img {
+                                                        width:100%;
+                                                        outline: 4px solid rgba(255,255,255, 0.3);
+                                                        outline-offset: -15px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.left-text  {
+                                        width:100%;
+                                        .gap {
+                                            padding: 0 15px;
+                                            .text-box {
+                                                width:100%;
+                                                ul {
+                                                    width:100%;
+                                                    li {
+                                                        text-align: left;
+                                                        width:80%;
+                                                        h2 {
+                                                            padding:0 0 10px 0;
+                                                            i {
+                                                                font-size: 40px;
+                                                                color:#85d4c0;
+                                                            }
+                                                        }
+                                                        h3 {
+                                                            font-size: 18px;font-weight: 700; color:#85d4c0;
+                                                            line-height: 130%;letter-spacing: -0.3px;
+                                                        }
+                                                        h4 {
+                                                            font-size: 13px;font-weight: 600;
+                                                            padding: 20px 0;
+                                                        }
+                                                        p {
+                                                            font-size: 13px;font-family: 'Roboto';
+                                                            line-height: 170%;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .icon-box {       
+                            user-select: none;                     
+                            display: flex;
+                            width:100%;
+                            padding: 30px 0 0 0;
+                            text-align: center;
+                            .left  {
+                                width:50%;   
+                                a {
+                                    margin: 0 10px;
+                                    color:#333;                                    
+                                    i {
+                                        font-size: 14px;
+                                    }
+                                }                             
+                            } 
+                            .right {
+                                width:50%;
+                            } 
+                        }
+                    }
+                }
+                }
+            }            
+        }
+        #section3 {
+            width:100%;
+            height: 346px;
+            background: url(../img/wedding-img2.jpg) no-repeat 50% 50% fixed;
+            background-size: 100% auto;
+            position: relative;
+            &::before{
+                content: '';
+                background-color: rgba(37, 37, 37,0.5);
+                width: 100%;
+                height: 346px;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;}
+            
+            .container {
+                width:100%;
+                max-width:1170px;
+                margin: 0 auto;
+                height: 100%;
+                z-index: 2;
+                position: relative;
+                .gap {
+                    width:100%;
+                    height: 100%;
+                    padding: 0 15px;
+                    .title {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;    
+                        align-items: center;
+                        justify-content: center;
+                        h2 {                       
+                            font-size: 24px;
+                            color: #85d4c0;; 
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+            }
+        }
+        #section4 {
+            width:100%;
+            background: #fff;
+            padding: 130px 0;
+            border-bottom: 1px solid #ccc;
+            .container {
+                width: 1170px;
+                margin:0 auto;
+                > .gap {
+                    width: 100%;
+                    .title {
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 0 90px 0;
+                        h2 {
+                            display: inline-block;
+                            font-size: 24px;
+                            color: #e15276; 
+                            position: relative;
+                            font-weight: 700;
+                            &::before{
+                                content:'';
+                                position: absolute;
+                                left: -60px;
+                                top: 50%;
+                                margin: -0.5px 0 0 0;
+                                width: 40px;
+                                height: 1px;
+                                background: #93e4cf;
+                            }                           
+                            &::after{
+                                content:'';
+                                position: absolute;
+                                right: -60px;
+                                top: 50%;
+                                margin: -0.5px 0 0 0;
+                                width: 40px;
+                                height: 1px;
+                                background: #93e4cf;
+                            }                           
+                        }
+                    }
+                    .content {
+                        width: 100%;
+                        
+                        ul {
+                            
+                            width: 100%;
+                            display: flex;
+                            li {
+                                width: 33.33333%;
+                                .col-gap {
+                                    width:100%;
+                                    padding: 0 15px;
+                                    text-align: center;
+                                    .box {
+                                        width:100%;
+                                        border: 5px solid #eee;
+                                        .gap {
+                                            width:100%;
+                                            padding: 35px 60px;
+                                            h2 {
+                                                padding: 0 0 15px 0;
+                                                i {
+                                                    font-size: 60px;
+                                                    color: #85d4c0;
+                                                }                                    
+                                            }
+                                            h3 { font-size: 15px;font-weight: 600;}
+                                            hr {border:0;background: #ccc;width:100%;height:1px;margin: 25px 0;}
+                                            p {color: #929292; font-size: 13px;padding: 0 0 10px 0;}
+                                            h4 {color: #929292; font-size: 13px;}
+                                        }
+                                    }
+
+                                               
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #section5 {
+            width: 100%;
+            padding: 130px 0;
+            background: #fff;
+            .container {
+                width: 100%;
+                max-width: 1170px;
+                margin: 0 auto;
+                .gap {
+                    width: 100%;
+                    .title {
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 0 90px 0;
+                        h2 {
+                            display: inline-block;
+                            font-size: 24px;
+                            color: #e15276; 
+                            position: relative;
+                            font-weight: 700;
+                            &::before{
+                                content:'';
+                                position: absolute;
+                                left: -60px;
+                                top: 50%;
+                                margin: -0.5px 0 0 0;
+                                width: 40px;
+                                height: 1px;
+                                background: #93e4cf;
+                            }                           
+                            &::after{
+                                content:'';
+                                position: absolute;
+                                right: -60px;
+                                top: 50%;
+                                margin: -0.5px 0 0 0;
+                                width: 40px;
+                                height: 1px;
+                                background: #93e4cf;
+                            }                           
+                        }
+                    }
+                    .content {
+                        width: 100%;
+                        overflow: hidden;
+                        .gallery-box {
+                            width: 1181px;
+                            margin: 0 0 0 -11px;
+                            ul {
+                                width: 100%;
+                                display: flex;
+                                // flex-flow: row nowrap; //가로배치 줄바꿈없음
+                                flex-flow: row wrap; //가로배치 줄바꿈있음
+                                li {
+                                    width: 25%;  // 모두 합해서 100%되면 줄바꿈
+                                    .col-gap {
+                                        // width: 100%;
+                                        // padding: 0 0 11px 11px;  오버 이미지이 포함되어서 적합하지 않다
+                                          
+                                        width: auto;  //마진 제외하고 나머지 너비를 채운다
+                                        margin: 0 0 11px 11px;
+                                        overflow: hidden;  // 오버되는 이미지가 마진영역에서는 감춘다.
+
+                                        a {
+                                            display: block;
+                                            width: 100%;
+                                            figure {
+                                                width: 100%;
+                                                img {
+                                                    width: 100%;
+                                                    transition: all 0.3s; //시간
+                                                    &:hover {
+                                                        // 변형: 크기(1.1);
+                                                        transform: scale(1.1);
+                                                        opacity: 0.2;
+                                                        cursor: url(../img/icon-zoom.png), auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #section6 {
+            width:100%;
+            height: 500px + 130px + 130px;
+            background: url(../img/wedding-img16.jpg) no-repeat 50% 50%;
+            background-size: cover;
+            padding: 130px 0;
+            position: relative;
+            &::before {
+                content:'';
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(37, 37, 37, 0.5);
+            }
+              .container{
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                max-width: 1170px;
+                margin: 0 auto;
+                .gap{
+                    width: 100%;
+                    .content{
+                        width: 100%;
+                        > ul{
+                            width: 100%;
+                            display: flex;
+                           > li{
+                            width: 50%;
+                                .col-gap{
+                                    width: 100;
+                                    padding: 0 15px;
+                                    //padding-> width 100% 마진쓰면 밖으로 나가서 auto사용
+                                    .content-box{
+                                    width: 100%;
+                                    height: 500px;
+                                    outline: 5px solid rgba(255,255,255,0.3);
+                                    outline-offset: -20px;
+                                    &.left{
+                                        background: url(../img/wedding-img17.jpg)no-repeat 50% 50%;
+                                        background-size: cover;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        h2{
+                                            width: 60%;
+                                            font-size:28px; 
+                                            font-weight: 600; 
+                                            color: #fff;
+                                            line-height: 150%;
+                                            text-align: center;
+                                            font-family: 'Montserrat';
+                                            letter-spacing: 0.3px;
+                                        }
+                                    }
+                                    &.right{
+                                        background:#93e4cf;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        .content-wrap{
+                                            width: 75%;
+                                            .content-head{      
+                                                font-size: 24px;
+                                                font-weight: 700;
+                                                color: #626262;
+                                                text-align: center;                                 
+                                                font-size: 24px;
+                                                font-weight: 700;
+                                                color: #626262;
+                                                text-align: center;
+                                                padding: 0 0 40px 0;
+                                            }
+                                            //전송 폼
+                                            #messageForm{
+                                                padding: 40px 0 30px 0;
+                                                ul{
+                                                    width: 100%;
+                                                    li{
+                                                        width: 100%;
+                                                        padding: 8px 0;
+                                                        &::nth-child(3){
+                                                            display: flex;
+                                                            justify-content: space-between;
+                                                        }
+                                                        input{
+                                                            width: 100%;
+                                                            height: 47px;
+                                                            background: #fff;
+                                                            border: 0;
+                                                            border-radius: 2px;
+                                                            padding: 0 15px;
+                                                            //입력상자의 패딩은 안에 글씨가 들어감
+                                                            &::placeholder{
+                                                                color: #ccc;
+                                                            }
+                                                            &:focus{
+                                                                outline: 0;
+                                                            }
+                                                        }
+                                                        div{
+                                                            width: 47%;
+                                                            select{
+                                                                width: 100%;
+                                                                height: 47px;
+                                                                background: #fff url(../img/select-arrow.png) no-repeat 97% 50%;
+                                                                //100%는 오른쪽 끝
+                                                                border: 0;
+                                                                //원래의 모양을 사용안함
+                                                                appearance: none;
+                                                                padding: 0 15px;
+                                                                &:focus{
+                                                                    outline: 0;
+                                                                }
+                                                            }
+                                                         }
+                                                    }
+                                                }
+
+                                            }
+                                            .content-foot{
+                                                font-size: 13px;
+                                                color: #626262;
+                                                text-align: center;
+                                                padding: 10px 15px;
+                                                border: 2px solid #cc5;
+                                                display: flex;
+                                                &.foot1{
+                                                    display: block;
+                                                    &.on{
+                                                        display: none;
+                                                    }
+                                                }
+                                                &.foot2{
+                                                    display: none;
+                                                    &.on{
+                                                        display: block;
+                                                     }
+                                                 }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+        
+        #section7 {
+            width:100%;
+            height: 339.375px + 130px + 130px;
+            background: #fff;
+            padding: 130px 0;
+        }
+        #section8 {
+            width:100%;
+            height: 675.250px + 130px + 130px;
+            background: #f7f7f7;
+            padding: 130px 0;            
+        }
+        #section9 {
+            width:100%;
+            height: 614.594px + 130px + 130px;
+            background: #fff;
+            padding: 130px 0; 
+        }
+        #section10 {
+            width:100%;
+            height: 294.375px + 130px + 80px;
+            background: #fff;
+            padding: 130px 0 80px 0; 
+        }
+        #section11 {
+            width:100%;
+            height: 420px;
+            background: #fff;
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+        }
+
+
+    }
+    #footer {
+        z-index: 1;
+        position: relative;
+        width:100%;
+        height: 300px;
+        background: #dcdcdc;
+         }
+        }
+

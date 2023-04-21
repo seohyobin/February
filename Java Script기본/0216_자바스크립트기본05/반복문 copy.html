@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 05 제어문(반복문, 조건문)</title>
+
+    
+</head>
+<body> 
+    <table id="table3" class="table">
+
+    </table>
+
+    <table id="table2" class="table">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+
+    <style>
+        .table{
+            border-collapse:collapse;
+            width: 250px;margin: 50px auto;}
+        .table td{
+            width: 50px; height: 50px;
+            border: 1px solid #00f; text-align: center;}
+    </style>
+
+    <script>
+        'use strict'
+        let cnt = 0;
+        let txt='';
+
+        cnt=0; 
+        txt = '';
+        for(let i=0; i<=4; i++){
+            
+            txt+= `<tr>`;
+                if(i>=5); i=5;
+            for(let j=0; j<=4; j++){
+                
+                
+            cnt++;
+            
+
+            txt+= `<td>${cnt}</td>`;      
+            }
+            
+            txt+= `</tr>`;
+        }
+        for(let i=0; i<=4; i++){
+            
+            txt+= `<tr>`;
+                if(i>=5); i=5;
+            for(let j=0; j<=4; j++){
+                
+                
+            cnt++;
+            
+
+            txt+= `<td>${cnt}</td>`;      
+            }
+            
+            txt+= `</tr>`;
+        }
+
+            
+
+
+       
+        table2.innerHTML = txt;
+        
+        console.log(txt);
+
+        
+
+    </script>
+
+
+
+
+</body>
+</html>

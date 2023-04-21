@@ -1,0 +1,1320 @@
+@import url('./fonts.css');
+@import url('./reset.css');
+@import url('./skip.css');
+
+// 중첩코딩
+#wrap {
+    width: 100%;
+    height: 100%;
+    #header {
+        width: 100%;
+        height: 86px;
+        background: #93e4cf;
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 3;
+        .container {
+            width: 100%;
+            max-width: 1170px;
+            height: 100%;
+            margin: 0 auto;
+            .gap {
+                width: 100%;
+                padding: 0 15px;
+                height: 100%;
+                display: flex;
+                .left {
+                    width: 38%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;    
+                    ul {
+                        display: flex;
+                        margin: 0 30px 0 0;
+                        li {
+                            margin: 0 0 0 30px;
+                            a {
+                                color:#626262;
+                                font-size: 13px;
+                                font-weight: 600;
+                                &:focus {
+                                    color:#d32b55;
+                                }
+                                &:hover {
+                                    color:#d32b55;
+                                }
+                                &.on {
+                                    color:#d32b55;
+                                }
+                            }
+                        }
+                    }
+                }
+                .center {
+                    width: 24%;
+                    height: 100%;
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        background: url(../img/logo-pink2.png) no-repeat 50% 50%;
+                        background-size: cover;
+                    }
+                }
+                .right {
+                    width: 38%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    ul {
+                        display: flex;
+                        margin: 0 0 0 30px;
+                        li {
+                            margin: 0 30px 0 0;
+                            a {
+                                color:#626262;
+                                font-size: 13px;
+                                font-weight: 600;
+                                &:focus {
+                                    color:#d32b55;
+                                }
+                                &:hover {
+                                    color:#d32b55;
+                                }
+                                &.on {
+                                    color:#d32b55;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #main {
+        z-index: 2;
+        position: relative;
+        width: 100%;
+        #section1{
+            width: 100%;
+            .container{
+                width: 100%;
+                .slide-container{
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    .slide-view{
+                        width: 100%;
+                        overflow: hidden;
+                        .slide-wrap{
+                            width: 100% * 4;
+                            display: flex;
+                            //슬라이드 한개당 4초대기 1초이동 ->총 5초
+                            animation: slide 15s both ease-in-out;
+                             //슬라이드 이미지 검정 투명 캡
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(0,0,0,0.4);
+                            }
+                            .slide{
+                                width: 100%;
+                                height: 100vh;
+                                background: url() no-repeat 50% 50% ;
+                                background-size: cover;
+                                &.slide1{background-image: url(../img/wedding-img1.jpg);}
+                                &.slide2{background-image: url(../img/wedding-img2.jpg);}
+                                &.slide3{background-image: url(../img/wedding-img3.jpg);}
+                            }
+                        }
+                    }
+                }
+                .title{
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    div{
+                        width: 100%;
+                        max-width: 307px;
+                        img{
+                            width: 100%;}
+                        hr{
+                            width: 100%;
+                            height: 3px;
+                            border: 0;
+                            border-top: 1px solid #85d4c0;
+                            border-bottom: 1px solid #85d4c0;
+                            margin: 40px 0;
+                        }
+                        h2{
+                            color: #fff;
+                            font-size: 18px;
+                            font-weight: 500;
+                            padding: 0 0 8px 0;
+                        }
+                        h3{
+                            color: #85d4c0;
+                            font-size: 24px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+        }
+        //슬라이드1-> -1903px * 0 => 0
+        //슬라이드2-> -1903px * 1 => 1903
+        //슬라이드3-> -1903px * 2 => 3806
+        //슬라이드1-> -1903px * 3 => 5789
+        @keyframes slide {
+                0%{transform: translateX(-1903px * 0);}
+             6.67%{transform: translateX(-1903px * 0);}
+            13.33%{transform: translateX(-1903px * 0);}
+            20.00%{transform: translateX(-1903px * 0);}
+            26.67%{transform: translateX(-1903px * 0);}
+            33.33%{transform: translateX(-1903px * 1);}
+            40.00%{transform: translateX(-1903px * 1);}
+            46.67%{transform: translateX(-1903px * 1);}
+            53.33%{transform: translateX(-1903px * 1);}
+            60.00%{transform: translateX(-1903px * 1);}
+            66.67%{transform: translateX(-1903px * 2);}
+            73.33%{transform: translateX(-1903px * 2);}
+            80.00%{transform: translateX(-1903px * 2);}
+            86.67%{transform: translateX(-1903px * 2);}
+            93.33%{transform: translateX(-1903px * 2);}
+              100%{transform: translateX(-1903px * 3);} //리턴
+
+            
+        }
+
+
+        #section2{
+            width:100%;
+            padding: 130px 0;
+            background: #fff;            
+            .container {
+                width:100%;
+                max-width:1170px;
+                margin: 0 auto;
+                .title {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 0 90px 0;
+                    h2 {
+                        display: inline-block;
+                        font-size: 24px;
+                        color: #e15276; 
+                        position: relative;
+                        font-weight: 700;
+                        &::before{
+                            content:'';
+                            position: absolute;
+                            left: -60px;
+                            top: 50%;
+                            margin: -0.5px 0 0 0;
+                            width: 40px;
+                            height: 1px;
+                            background: #93e4cf;
+                        }                           
+                        &::after{
+                            content:'';
+                            position: absolute;
+                            right: -60px;
+                            top: 50%;
+                            margin: -0.5px 0 0 0;
+                            width: 40px;
+                            height: 1px;
+                            background: #93e4cf;
+                        }                           
+                    }
+                }
+                .content {
+                    width: 100%;
+                    display: flex;
+                    .left  {
+                        width: 50%;
+                        height: 350px;
+                        .content-box {
+                            width:100%;
+                            > ul {
+                                width:100%;
+                                display: flex;
+                                > li {
+                                    width:50%;
+                                    &.left-image {
+                                        width:100%;
+                                        > .gap {
+                                            padding: 0 15px;
+                                            .img-box {
+                                                width:100%;
+                                                figure {
+                                                    width:100%;
+                                                    img {
+                                                        width:100%;
+                                                        outline: 4px solid rgba(255,255,255, 0.3);
+                                                        outline-offset: -15px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.left-text  {
+                                        width:100%;
+                                        .gap {
+                                            padding: 0 15px;
+                                            .text-box {
+                                                width:100%;
+                                                ul {
+                                                    width:100%;
+                                                    li {
+                                                        text-align: left;
+                                                        width:80%;
+                                                        h2 {
+                                                            padding:0 0 10px 0;
+                                                            i {
+                                                                font-size: 40px;
+                                                                color:#85d4c0;
+                                                            }
+                                                        }
+                                                        h3 {
+                                                            font-size: 18px;font-weight: 700; color:#85d4c0;
+                                                            line-height: 130%;letter-spacing: -0.3px;
+                                                        }
+                                                        h4 {
+                                                            font-size: 13px;font-weight: 600;
+                                                            padding: 20px 0;
+                                                        }
+                                                        p {
+                                                            font-size: 13px;font-family: 'Roboto';
+                                                            line-height: 170%;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .icon-box {
+                            user-select: none;
+                            display: flex;
+                            width:100%;
+                            padding: 30px 0 0 0;
+                            text-align: center;
+                            .left  {
+                                width:50%;   
+                                a {
+                                    margin: 0 10px;
+                                    color:#333;                                    
+                                    i {
+                                        font-size: 14px;
+                                    }
+                                }                             
+                            } 
+                            .right {
+                                width:50%;
+                            } 
+                        }
+                    }
+                    .right {
+                        width: 50%;
+                        height: 350px;
+                        .content-box {
+                            width:100%;
+                            > ul {
+                                width:100%;
+                                display: flex;
+                                > li {
+                                    width:50%;
+                                    &.left-image {
+                                        width:100%;
+                                        > .gap {
+                                            padding: 0 15px;
+                                            .img-box {
+                                                width:100%;
+                                                figure {
+                                                    width:100%;
+                                                    img {
+                                                        width:100%;
+                                                        outline: 4px solid rgba(255,255,255, 0.3);
+                                                        outline-offset: -15px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.left-text  {
+                                        width:100%;
+                                        .gap {
+                                            padding: 0 15px;
+                                            .text-box {
+                                                width:100%;
+                                                ul {
+                                                    width:100%;
+                                                    li {
+                                                        text-align: left;
+                                                        width:80%;
+                                                        h2 {
+                                                            padding:0 0 10px 0;
+                                                            i {
+                                                                font-size: 40px;
+                                                                color:#85d4c0;
+                                                            }
+                                                        }
+                                                        h3 {
+                                                            font-size: 18px;font-weight: 700; color:#85d4c0;
+                                                            line-height: 130%;letter-spacing: -0.3px;
+                                                        }
+                                                        h4 {
+                                                            font-size: 13px;font-weight: 600;
+                                                            padding: 20px 0;
+                                                        }
+                                                        p {
+                                                            font-size: 13px;font-family: 'Roboto';
+                                                            line-height: 170%;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .icon-box {       
+                            user-select: none;                     
+                            display: flex;
+                            width:100%;
+                            padding: 30px 0 0 0;
+                            text-align: center;
+                            .left  {
+                                width:50%;   
+                                a {
+                                    margin: 0 10px;
+                                    color:#333;                                    
+                                    i {
+                                        font-size: 14px;
+                                    }
+                                }                             
+                            } 
+                            .right {
+                                width:50%;
+                            } 
+                        }
+                    }
+                }
+            }            
+        }
+        #section3 {
+            width:100%;
+            height: 346px;
+            background: url(../img/wedding-img2.jpg) no-repeat 50% 50% fixed;
+            background-size: 100% auto;
+            position: relative;
+            &::before{
+                content: '';
+                background: rgba(0,0,0,0.5);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;}
+            
+            .container {
+                width:100%;
+                max-width:1170px;
+                margin: 0 auto;
+                height: 100%;
+                z-index: 2;
+                position: relative;
+                .gap {
+                    width:100%;
+                    height: 100%;
+                    padding: 0 15px;
+                    .title {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;    
+                        align-items: center;
+                        justify-content: center;
+                        h2 {                       
+                            font-size: 24px;
+                            color: #85d4c0;; 
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+            }
+        }
+        #section4 {
+            width:100%;
+            background: #fff;
+            padding: 130px 0;
+            border-bottom: 1px solid #ccc;
+            .container {
+                width: 1170px;
+                margin:0 auto;
+                > .gap {
+                    width: 100%;
+                    .title {
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 0 90px 0;
+                        h2 {
+                            display: inline-block;
+                            font-size: 24px;
+                            color: #e15276; 
+                            position: relative;
+                            font-weight: 700;
+                            &::before{
+                                content:'';
+                                position: absolute;
+                                left: -60px;
+                                top: 50%;
+                                margin: -0.5px 0 0 0;
+                                width: 40px;
+                                height: 1px;
+                                background: #93e4cf;
+                            }                           
+                            &::after{
+                                content:'';
+                                position: absolute;
+                                right: -60px;
+                                top: 50%;
+                                margin: -0.5px 0 0 0;
+                                width: 40px;
+                                height: 1px;
+                                background: #93e4cf;
+                            }                           
+                        }
+                    }
+                    .content {
+                        width: 100%;
+                        
+                        ul {
+                            
+                            width: 100%;
+                            display: flex;
+                            li {
+                                width: 33.33333%;
+                                .col-gap {
+                                    width:100%;
+                                    padding: 0 15px;
+                                    text-align: center;
+                                    .box {
+                                        width:100%;
+                                        border: 5px solid #eee;
+                                        .gap {
+                                            width:100%;
+                                            padding: 60px;
+                                            h2 {
+                                                padding: 0 0 15px 0;
+                                                i {
+                                                    font-size: 60px;
+                                                    color: #85d4c0;
+                                                }                                    
+                                            }
+                                            h3 { font-size: 15px;font-weight: 600;}
+                                            hr {border:0;background: #ccc;width:100%;height:1px;margin: 25px 0;}
+                                            p {color: #929292; font-size: 13px;padding: 0 0 10px 0;}
+                                            h4 {color: #929292; font-size: 13px;}
+                                        }
+                                    }
+
+                                               
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #section5 {
+            width: 100%;
+            padding: 130px 0;
+            background: #fff;
+            .container {
+                width: 100%;
+                max-width: 1170px;
+                margin: 0 auto;
+                .gap {
+                    width: 100%;
+                    .title {
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 0 90px 0;
+                        h2 {
+                            display: inline-block;
+                            font-size: 24px;
+                            color: #e15276; 
+                            position: relative;
+                            font-weight: 700;
+                            &::before{
+                                content:'';
+                                position: absolute;
+                                left: -60px;
+                                top: 50%;
+                                margin: -0.5px 0 0 0;
+                                width: 40px;
+                                height: 1px;
+                                background: #93e4cf;
+                            }                           
+                            &::after{
+                                content:'';
+                                position: absolute;
+                                right: -60px;
+                                top: 50%;
+                                margin: -0.5px 0 0 0;
+                                width: 40px;
+                                height: 1px;
+                                background: #93e4cf;
+                            }                           
+                        }
+                    }
+                    .content {
+                        width: 100%;
+                        overflow: hidden;
+                        .gallery-box {
+                            width: 1181px;
+                            margin: 0 0 0 -11px;
+                            ul {
+                                width: 100%;
+                                display: flex;
+                                // flex-flow: row nowrap; //가로배치 줄바꿈없음
+                                flex-flow: row wrap; //가로배치 줄바꿈있음
+                                li {
+                                    width: 25%;  // 모두 합해서 100%되면 줄바꿈
+                                    .col-gap {
+                                        // width: 100%;
+                                        // padding: 0 0 11px 11px;  오버 이미지이 포함되어서 적합하지 않다
+                                          
+                                        width: auto;  //마진 제외하고 나머지 너비를 채운다
+                                        margin: 0 0 11px 11px;
+                                        overflow: hidden;  // 오버되는 이미지가 마진영역에서는 감춘다.
+
+                                        a {
+                                            display: block;
+                                            width: 100%;
+                                            figure {
+                                                width: 100%;
+                                                img {
+                                                    width: 100%;
+                                                    transition: all 0.3s; //시간
+                                                    &:hover {
+                                                        // 변형: 크기(1.1);
+                                                        transform: scale(1.1);
+                                                        opacity: 0.2;
+                                                        cursor: url(../img/icon-zoom.png), auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #section6 {
+            width:100%;
+            height: 500px + 130px + 130px;
+            background: url(../img/wedding-img16.jpg) no-repeat 50% 50%;
+            background-size: cover;
+            padding: 130px 0;
+            position: relative;
+            &::before {
+                content:'';
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(37, 37, 37, 0.5);
+              } 
+              .container{
+                width: 100%;
+                max-width: 1170px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 2;
+                .gap{
+                    width: 100%;
+                    .content{
+                        width: 100%;
+                        > ul{
+                            width: 100%;
+                            display: flex;
+                            > li{
+                                width: 50%;
+                                .col-gap{
+                                    width: 100%;
+                                    padding: 0 15px;
+                                    .content-box{
+                                        width: 100%;
+                                        height:500px;
+                                        outline: 5px solid rgba(255,255,255,0.3);
+                                        outline-offset: -20px;
+                                        &.left{
+                                            background: url(../img/wedding-img17.jpg) no-repeat 50% 50%;
+                                            background-size: cover;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            h2{
+                                                width: 60%;
+                                                font-size: 28px;
+                                                font-weight: 600;
+                                                color: #fff;
+                                                line-height: 130%;
+                                                text-align: center;
+                                            }
+                                        }
+                                        &.right{
+                                            background: #93e4cf;
+                                            align-items: center;
+                                            justify-content: center;
+                                            display: flex;
+                                            .content-wrap{
+                                                width: 75%;
+                                                .content-head{
+                                                    font-size: 24px;
+                                                    font-weight: 600;
+                                                    color: #626262;
+                                                    text-align: center;
+                                                }
+                                                #messageForm{
+                                                   padding: 40px 0 30px 0;
+                                                    ul{
+                                                        width: 100%;
+                                                        li{
+                                                            width: 100%;
+                                                            padding: 10px 0;
+                                                            &:nth-child(3){
+                                                                display: flex;
+                                                                justify-content: space-between;
+                                                            }
+                                                            &:last-child{
+                                                                text-align: center;
+                                                            }
+                                                            input{
+                                                                width: 100%;
+                                                                height: 47px;
+                                                                background: #fff;
+                                                                border: 0;
+                                                                border-radius: 2px;
+                                                                padding: 0 15px;
+                                                                &::placeholder{
+                                                                    color: #ccc;
+                                                                }
+                                                                &:focus{
+                                                                    outline: 0;
+                                                                }
+                                                            }
+                                                        div{
+                                                            width: 47%;
+                                                            select{
+                                                                width: 100%;
+                                                                height: 47px;
+                                                                background: #fff url(../img/select-arrow.png) no-repeat 97% 50%;
+                                                                border: 0;
+                                                                appearance: none;
+                                                                padding: 0 15px;
+                                                                color: #626262;
+                                                                &:focus{
+                                                                    outline: 0;
+                                                                }
+                                                            } 
+                                                        }
+                                                        button{
+                                                            padding: 0 15px;
+                                                            height: 50px;
+                                                            background: #000;
+                                                            color: #fff;
+                                                            border: 3px solid #000;
+                                                            border-radius: 3px;
+                                                            cursor: pointer;
+                                                            text-transform: uppercase;
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            transition: all 0.3s;
+                                                            &:hover{
+                                                                background: #fff;
+                                                                color: #000;
+                                                            }
+                                                        }
+                                                      
+                                                        }
+                                                    }
+                                                }
+                                                .content-foot{
+                                                    display: none;
+                                                    font-size: 13px;
+                                                    color: #626262;
+                                                    text-align: center;
+                                                    padding: 10px 15px;
+                                                    border: 2px solid #cc3;
+                                                    &.foot1{
+                                                        &.on{
+                                                            display: block;
+                                                        }
+                                                    }
+                                                    &.foot2{
+                                                        &.on{
+                                                            display: block;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+              }
+
+        }
+        #section7 {
+            width:100%;
+            background: #fff;
+            padding: 130px 0;
+           .container{
+            width: 100%;
+            max-width: 1170px;
+            margin: 0 auto;
+            .gap{
+                width: 100%;
+                .title{
+                    width: 100%;
+                    text-align: center;
+                    padding: 0 0 90px 0;
+                    h2{
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: #e15276;
+                        display: inline-block;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 40px;
+                            height: 1px;
+                            background-color: #85d4c0;
+                            top:50%;
+                            left: -60px;
+                            margin: -0.5px 0 0 0;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 40px;
+                            height: 1px;
+                            background-color: #85d4c0;
+                            top:50%;
+                            right: -60px;
+                            margin: -0.5px 0 0 0; 
+                        }
+                    }
+                }
+                .content{
+                    width: 100%;
+                    text-align: center;
+                    p{
+                        width: 456px;
+                        font-size: 13px;
+                        font-family: 'Roboto';
+                        margin: 0 auto;
+                        line-height: 180%;
+                        padding: 0 0 80px 0;
+                    }
+                    span{
+                        display: block;
+                        width: 100%;
+                        max-width: 945px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: space-around;
+
+                        a{
+                            img{
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+           }
+        }
+        #section8 {
+            width:100%;
+            background: #f7f7f7;
+            padding: 130px 0;
+            .container{
+                width: 100%;
+                .gap{
+                    width: 100%;
+                    .title{
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 15px 90px 15px;
+                        h2{
+                            font-size: 24px;
+                            font-weight: 700;
+                            color: #e15276;
+                            display: inline-block;
+                            position: relative;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 40px;
+                                height: 1px;
+                                background-color: #85d4c0;
+                                top:50%;
+                                left: -60px;
+                                margin: -0.5px 0 0 0;
+                            }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                width: 40px;
+                                height: 1px;
+                                background-color: #85d4c0;
+                                top:50%;
+                                right: -60px;
+                                margin: -0.5px 0 0 0; 
+                            }
+                        }
+                    }
+                    .content{
+                        width: 100%;
+                        .slide-container{
+                            width: 100%;
+                            .slide-view{
+                                width: 100%;
+                                overflow: hidden;
+                                .slide-wrap{//기차 5칸 :우측에서 좌측으로 이동하는 애니메이션 구현
+                                    width: 25% * 5; //125%
+                                    display: flex;
+                                    animation: slide-ani 4s ease both;
+                                    //animation: slide-ani 4s ease-in both;
+                                    //animation: slide-ani 4s ease-out both;
+                                    //animation: slide-ani 4s ease-in-out both;
+                                    //animation: slide-ani 4s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+                                    //animation: slide-ani 4s cubic-bezier(0, 0.5, 0.8, 1) both;
+
+                                    .slide{
+                                        width: 25%;
+                                        //사용자 선택안함
+                                        user-select: none;
+                                        .col-gap{
+                                            width: auto;
+                                            margin: 0 15px;
+
+                                            .top-box{
+                                                width: 100%;
+                                                position: relative;
+                                                overflow: hidden;
+                                                &::after{
+                                                    content: '';
+                                                    display: block;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background: rgba(0,0,0,0.0);
+                                                    z-index: 2;
+                                                    cursor: pointer;
+                                                    transition: all 0.3s;
+                                                }
+                                                img{
+                                                    width: 100%;
+                                                    position: relative;
+                                                    z-index: 1;
+                                                    transition: all 0.3s;
+
+                                                }
+                                                span{
+                                                    position: absolute;
+                                                    right: 0;
+                                                    bottom: 0;
+                                                    padding: 15px 25px;
+                                                    background: #f7f7f7;
+                                                    z-index: 3;
+                                                    em{
+                                                    font-size: 13px;
+                                                    color: #626262;
+                                                    font-weight: 600;
+                                                    text-transform: uppercase;
+                                                    }
+                                                }
+                                            }
+                                            .bottom-box{
+                                                width: 100%;
+                                                padding: 25px;
+                                                background: #f7f7f7;
+                                                display: flex;
+                                                h3{
+                                                    font-size: 35px;
+                                                    font-weight: 700;
+                                                    color:#e15276;
+                                                    font-family: 'Montserrat';
+                                                    margin: 0 25px 0 0;
+                                                }
+                                                
+                                                div{
+                                                    h4{
+                                                        font-size: 15px;
+                                                        font-weight: 700;
+                                                        color:#222;
+                                                        font-family: 'Montserrat';
+                                                        text-transform: uppercase;
+                                                    }
+                                                    p{
+                                                        
+                                                        font-size: 14px;
+                                                        color:#626262;
+                                                        line-height: 170%;
+                                                        font-family: 'Roboto';
+                                                        padding: 10px 0 30px 0;
+                                                    }
+                                                    i{
+                                                        display: block;
+                                                        width: 30px;
+                                                        height: 4px;
+                                                        background-color: #85d4c0;
+                                                    }
+                                                }
+
+                                            }
+                                            &:hover{
+                                                cursor: url(../img/icon-move.png), auto;
+                                                .top-box{
+                                                    &::after{
+                                                        background: rgba(0,0,0,0.4);
+                                                    }
+                                                }
+                                                
+                                                img{
+                                                        transform: scale(1.1);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }            
+        }
+        //애니메어션 이름
+        //slide-ani
+        //3초대기 1초이동
+        //100%/4 25% 1초에 해당하는 백분율
+        //키프레임
+        //이동 트렌스폼 : 이동-> 우측에서 좌측으로이동  트렌스레이트x(-475.75px)
+        //이동 transform : translateX (-475.75px)
+        @keyframes slide-ani {
+             0%{transform: translateX(-475.75px * 0);}
+            25%{transform: translateX(-475.75px * 0);}
+            50%{transform: translateX(-475.75px * 0);}
+            75%{transform: translateX(-475.75px * 0);}
+           100%{transform: translateX(-475.75px * 1);}
+        }
+        
+        #section9 {
+            width:100%;
+            background: #fff;
+            padding: 130px 0; 
+            border-bottom: 1px solid #ddd;
+            .container{
+                width: 100%;
+                max-width: 1170px;
+                margin: 0 auto;
+                .gap{
+                    width: 100%;
+                    .title{
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 15px 90px 15px;
+                        h2{
+                            font-size: 24px;
+                            font-weight: 700;
+                            color: #e15276;
+                            display: inline-block;
+                            position: relative;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 40px;
+                                height: 1px;
+                                background-color: #85d4c0;
+                                top:50%;
+                                left: -60px;
+                                margin: -0.5px 0 0 0;
+                            }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                width: 40px;
+                                height: 1px;
+                                background-color: #85d4c0;
+                                top:50%;
+                                right: -60px;
+                                margin: -0.5px 0 0 0; 
+                            }
+                        }
+                    }
+                    .content{
+                        width: 100%;
+                         > ul{
+                            width: 100%;
+                            display: flex;
+                            //flex-flow: row nowrap;//줄안바뀜 li 50%
+                            //flex-flow: row wrap;//줄바뀜 li 50%
+                           > li{
+                                width: 33.33333%;
+                                //100% / 3
+                                .col-gap{
+                                    margin: 0 15px;
+                                    .img-box{
+                                        width: 100%;
+                                        img{
+                                            width: 100%;
+                                            transition: all 0.3s;
+                                            &:hover{
+                                                filter: grayscale(1);
+                                            }
+                                        }
+                                    }
+                                    .txt-box{
+                                        width: 100%;
+                                        padding: 30px 0 0 0;
+                                        ul{
+                                            width: 100%;
+                                            li{
+                                                padding: 0 0 15px 0;
+                                                &:first-child{
+                                                    a{
+                                                        padding: 5px 15px;
+                                                        background: #000;
+                                                        color: rgba(255,255,255,1);
+                                                        font-size: 10px;
+                                                        font-weight: 600;
+                                                        border-radius: 2px;
+                                                        font-family: 'Montserrat';
+                                                        transition: all 0.3s;
+                                                        &:hover{
+                                                            color: rgba(255,255,255,0.7);
+                                                            }
+                                                    }
+                                                } 
+                                                h3{ 
+                                                    color:#373737;
+                                                    font-weight: 600;
+                                                    font-size: 15px;
+                                                    font-family: 'Montserrat';
+                                                    a{
+                                                        font-size: 15px;
+                                                        font-weight:700;
+                                                        line-height: 160%;
+                                                        color:#373737;
+                                                        font-family: 'Montserrat';
+                                                    }
+
+                                                }
+                                                p{
+                                                    font-size: 13px;
+                                                    font-family: 'Roboto';
+                                                    line-height: 180%;
+                                                    color:#626262;
+
+                                                }
+                                                hr{
+                                                    border: 0;
+                                                    width: 100%;
+                                                    height: 1px;
+                                                    background: #ddd;
+                                                    margin: 15px 0 20px 0;
+                                                }
+                                                &:last-child{
+                                                    color:#ababab;
+                                                    font-size: 11px;
+                                                    a{
+                                                        color:#ababab;
+                                                        font-family: 'Montserrat';
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #section10 {
+            width:100%;
+            background: #fff;
+            padding: 130px 0 80px 0;
+            .container{
+                width: 100%;
+                max-width: 1170px;
+                margin: 0 auto;
+                .gap{
+                    margin: 0 15px;
+                    .title{
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 15px 90px 15px;
+                        h2{
+                            font-size: 24px;
+                            font-weight: 700;
+                            color: #e15276;
+                            display: inline-block;
+                            position: relative;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 40px;
+                                height: 1px;
+                                background-color: #85d4c0;
+                                top:50%;
+                                left: -60px;
+                                margin: -0.5px 0 0 0;
+                            }
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                width: 40px;
+                                height: 1px;
+                                background-color: #85d4c0;
+                                top:50%;
+                                right: -60px;
+                                margin: -0.5px 0 0 0; 
+                            }
+                        }
+                    }
+                    .content{
+                        width: 100%;
+                        p{
+                           margin: 0 auto;
+                            width: 40%; //456px
+                            font-size: 13px;
+                            font-family: 'Roboto';
+                            color: #626262;
+                            line-height: 170%;
+                            text-align: center;
+                            letter-spacing: 0.3;
+                        }
+                    }
+                }
+            }
+        }
+        #section11 {
+            width:100%;
+            height: 420px;
+            background: #fff;
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+        }
+
+
+    }
+    #footer {
+        z-index: 1;
+        position: relative;
+        width:100%;
+        background: #fff;
+        .container{
+            width: 100%;
+            max-width: 1170px;
+            margin: 0 auto;
+            .gap{
+                margin: 0 15px;
+                .content{
+                    width: 100%;
+                    text-align: center;
+                    .foot-row1{
+                        width: 100%;
+                        padding: 50px;
+                        border-bottom: 1px solid #ddd;
+                        a{
+                            margin: 0 20px;
+                            i{
+                                font-size: 22px;
+                                color: #575757;
+                            }
+                        }
+                    }
+                    .foot-row2{
+                        padding: 40px 0;
+                        p{
+                            font-size: 11px;
+                            font-weight: 500;
+                            color: #626262;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gotop{
+        z-index: 3;
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,1);
+            color: #fff;
+            font-size: 24px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            i{
+
+                font-size: 25px;
+                margin: -7px 0 0 0;
+
+            }
+        }
+    }
+}

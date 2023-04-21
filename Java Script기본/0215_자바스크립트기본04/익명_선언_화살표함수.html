@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수 | 이름없는 함수</title>
+</head>
+<body>
+    <script>
+         'use strict'
+        //1.함수를 선언해서 만들고
+        //2.함수를 호출해야만 실행
+        //3.선언적함수는 함수의 위 아래 어디서든지 호출실행가능
+        //4.익명함수는 함수의 아래에서만 호출실행가능
+
+//선언적 함수는 위, 아래 다 가능(위치에 관계없이 호출 가능)!!
+func2();//반드시 호출해야지 실행가능해!!!!!!!
+       function func2(){
+            let a=400;
+            let b=500;
+            return console.log(`선언적함수 리턴값${a+b}`);
+        }
+        func2();
+
+        //익명함수 변수 = function(){}
+        //호출시 오류발생 반드시 함수 아래에서만 호출가능!!
+        const func1 = function(x,y){//매개변수2개
+            let a=x;
+            let b=y;
+            return console.log(`익명함수 리턴값${a+b}`);
+        }
+        //익명함수 실행은 반드시 함수 선언 아래에서만 가능!!!
+        func1(78, 99);//전달인자 아규먼트 2개 
+        func1(100, 299);//전달인자 아규먼트 2개
+        func1(24787, 1564);//전달인자 아규먼트 2개
+
+
+        //function 키워드는 함수의 기본 키워드
+        //화살표 함수 ES6 NEXT 익명함수 반드시 아래에서 사용
+
+        function fn(){
+
+        }
+        const fn= ()=>{
+
+        }
+
+        //const fn1 = function(){
+
+        //}
+        const fn1=()=>{
+
+
+        }
+        //1.즉시표현함수식
+
+        // (function(){
+
+        // })();
+
+
+        //화살표함수    
+        (()=>{
+
+        })();
+
+        //화살표함수 실행
+
+        const 함수1 = (pa)  => { // 매개변수
+            console.log('함수1 내부 파라미타값 출력',pa);
+        }
+
+
+        함수1( 9 ); //아규먼트 (전달인자)
+
+
+    </script>
+</body>
+</html>

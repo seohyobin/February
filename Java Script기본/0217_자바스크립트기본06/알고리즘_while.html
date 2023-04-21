@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while_알고리즘</title>
+</head>
+<body>
+    
+<table id="tableBox1" class="table"></table>
+<table id="tableBox2" class="table"></table>
+<table id="tableBox2if" class="table"></table>
+<table id="tableBox3" class="table"></table>
+<table id="tableBox3if" class="table"></table>
+
+<script>
+
+const obj= {
+    init(){
+        this.tableBox1();
+        this.tableBox2();
+        this.tableBox2if();
+        this.tableBox3();
+        this.tableBox3if();
+    },
+    tableBox1(){
+        //5행 5열에 
+        //1부터 25까지 테이블 출력하시오
+        const tableBox1 = document.getElementById('tableBox1')
+        let i = 0;
+        let j = 0;
+        let t = '';
+        let cnt= 0;
+        let txt= '';
+        while(i<5){
+            i++;
+            j=0;
+            t+='<tr>'
+            while(j<5){ 
+                j++;
+                cnt++;
+                t+=`<td>${cnt}</td>`;
+            }
+            t+='</tr>'
+        }
+        tableBox1.innerHTML= t;
+    },
+    tableBox2(){
+          //5행 5열에 
+        //  1	2	3	4	5
+        //  6	7	8	9	
+        //  10	11	12		
+        //  13	14			
+        //  15				
+
+        //1부터 25까지 테이블 출력하시오
+        const tableBox2 = document.getElementById('tableBox2')
+        let i = 0;
+        let j = 0;
+        let t = '';
+        let cnt= 0;
+        while(i<5){//줄
+            i++;
+            j=0;
+            t+='<tr>'
+            while(j<6-i){ //칸 //12345 6789 101112 1314 15
+                j++;
+                cnt++;
+                t+=`<td>${cnt}</td>`;
+
+            }
+            console.log(j);
+            let k = j;
+            while(k<5){
+                k++;
+                t+='<td></td>'
+            }
+
+            t+='</tr>'
+        }
+        tableBox2.innerHTML= t;
+        
+    },
+    tableBox2if(){
+          //5행 5열에 
+        //  1	2	3	4	5
+        //  6	7	8	9	
+        //  10	11	12		
+        //  13	14			
+        //  15				
+
+        //1부터 25까지 테이블 출력하시오
+        ///////////////if문 사용
+        const tableBox2if = document.getElementById('tableBox2if')
+        let i = 0;
+        let j = 0;
+        let t = '';
+        let cnt= 0;
+        while(i<5){//
+            i++;
+            j=0;
+            t+='<tr>'
+
+            while(j<5){
+                j++;
+                if(j<7-i){
+                   
+                    cnt+=10;
+                    t+=`<td>${cnt}</td>`;//숫자
+
+                }
+                else{
+                    t+='<td></td>';//칸
+                }
+               
+            }  
+
+            t+='</tr>'
+        }
+        tableBox2if.innerHTML= t;
+        
+    },
+    tableBox3(){
+        const tableBox3 = document.getElementById('tableBox3')
+                              //5행 5열에 
+            //                   1
+            // 			    2	 3
+            // 		    4	5	 6
+            // 	    7	8	9	10
+            // 11	12	13	14	15
+
+        //1부터 25까지 테이블 출력하시오
+        let i = 0;
+        let j = 0;
+        let t = '';
+        let cnt= 0;
+        while(i<5){//줄
+            i++;
+            j=0;
+            t+='<tr>'
+            while(j<5-i){//빈칸4칸
+                j++;
+                t+='<td></td>'
+            }
+            while(j<5){ //끝이중요
+                j++;
+                cnt++;
+                t+=`<td>${cnt}</td>`;
+
+            }
+
+            t+='</tr>'
+        }
+        tableBox3.innerHTML= t;
+        
+    },
+    tableBox3if(){
+        const tableBoxif = document.getElementById('tableBox3if')
+                              //5행 5열에 
+            //                   1
+            // 			    2	 3
+            // 		    4	5	 6
+            // 	    7	8	9	10
+            // 11	12	13	14	15
+
+        //1부터 25까지 테이블 출력하시오
+        let i = 0;
+        let j = 0;
+        let t = '';
+        let cnt= 0;
+        while(i<5){//줄
+            i++;
+            j=0;
+            t+='<tr>'
+
+            while(j<5){ //끝이중요
+                j++;
+                if(j<6-i){
+                cnt+=10;
+                t+='<td></td>';
+                }
+                else{
+                    cnt+=10;
+                    t+=`<td>${cnt}</td>`;
+                }
+
+            }
+
+            t+='</tr>'
+        }
+        tableBox3if.innerHTML= t;
+        
+        //do{} while();
+        // do{
+        //     반복실행
+        // }while(조건);
+        //1~100까지의 합
+        console.log('do{}while()');
+        i=0;
+        let hap =0;//누적변수 
+        do{
+            i++;
+            hap=hap+i
+            console.log('i:',i,'합:',hap);
+        }while(i<100);
+        console.log('합',hap);
+
+        //1~100 까지 짝수의 합
+        //1~100 까지 홀수의 합 
+       
+        i=0;
+        let evenhap =0; 
+        let oddhap= 0;
+       
+        do{
+            i++;
+            if(i%2===0){
+                evenhap+= i;
+            }
+            // else if(i%2!==0) {
+            //     oddhap+=i;
+            // }
+            else if(i%2===1) {
+                oddhap+=i;
+            }
+        }while(i<100);
+        console.log('Even:',evenhap)
+        console.log('Odd:',oddhap)
+
+    }
+}
+
+obj.init();
+
+</script>
+<style>
+    *{margin: 0; padding: 0; vertical-align: middle; box-sizing: border-box;}
+    .table{border-collapse: collapse;margin: 50px auto;}
+    .table td{width: 50px;height: 50px;border: 1px solid #aaa;
+    text-align: center;}
+</style>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+</head>
+<body>
+    
+<script>
+    'use strict'
+    console.log('자바스크립트 콘솔 로그 출력');
+    document.write('웹문서 출력');
+    document.write('<h1>웹문서에 h1태그 출력</h1>');
+
+
+
+    let txt = '아아';
+
+    let txt1;
+    let txt2 ='' ;
+    let txt3 = 0;
+    let txt4 = null;
+    let txt5 = true;
+    let txt6 = '서효빈';
+
+    txt ='바보 babo 변수값 수정';
+    txt1 ='변수값 수정';
+    txt2 ='변수값 수정 문자열';
+    txt3 ='숫자(Number) 변수인데 변수값 수정 문자열';
+    txt4 ='null 변수인데 변수값 수정 문자열';
+    txt5 ='뷸(Boolean) 변수인데 변수값 수정 문자열';
+  
+
+
+    console.log(`txt ${txt}`);
+    console.log(`txt1 ${txt1}`);
+    console.log(`txt2 ${txt2}`);
+    console.log(`txt3 ${txt3}`);
+    console.log(`txt4 ${txt4}`);
+
+
+
+    let a=300;
+    let b=25;
+    let c;
+
+    console.log(`c=a+b ${a+b}=${a}+${b}`);
+    console.log(`c=a*b ${a*b}=${a}*${b}`);
+    console.log(`c=a/b ${a/b}=${a}/${b}`);
+    console.log(`c=a**b ${a**b}=${a}**${b}`);
+
+
+    let arr = [];
+
+    arr[0]= [];
+    arr[0][0]= [];
+    arr[0][0][0]= [];
+
+
+
+let obj={};
+
+arr=['딸기','사과','포도','체리',100];
+
+ 
+console.log(`배열 ${arr}`);
+console.log(`배열 arr. length  ${arr.length}`);
+console.log(`배열 arr. [인덱스번호 0-5]`);
+console.log(`배열 arr[0] ${arr[0]}`);
+console.log(`배열 arr[1] ${arr[1]}`);
+console.log(`배열 arr[2] ${arr[2]}`);
+console.log(`배열 arr[3] ${arr[3]}`);
+
+
+
+arr.map(function(val,idx,arr){
+    console.log(idx, val);
+    console.log(arr);
+});
+
+
+for(let i=0; i<=5; i++ ){
+console.log( `arr[${i}] ${arr[i]}` ); //arr[0]
+}
+for(let i=0; i<arr.length; i++ ){ //i < 6
+ console.log( `arr[${i}] ${arr[i]}` ); //arr[0]
+} 
+let newObject = new Object()
+newObject={
+    회원:[
+        {번호: 1, 이름:'서효빈'},
+        {번호: 1, 이름:'서효빈'},
+        {번호: 1, 이름:'서효빈'}
+    ]
+}
+obj = {
+    이름:'서효빈',
+    국어:89,
+    수학:90,
+    영어:100
+    
+
+총점(){
+    return this.국어+this.영어+this.수학;
+}
+</script>
+</body>
+</html>

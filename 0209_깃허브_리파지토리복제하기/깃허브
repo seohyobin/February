@@ -1,0 +1,105 @@
+깃허브 접속->로그인->깃허브 저장소만들어
+gitbash다운 설치->https://git-scm.com/downloads
+
+다운로드 설치 완료
+vs코드
+경로에 공백이 포함되지않게c,d,드라이브에 저장
+맥북 cde드라이브로 나와서 만들어
+
+워킹 프로젝트에 완성된 포토폴리오를 복사해서 넣어둔다
+포토폴리오 폴더를 드래그해서 vs코드에 넣는다
+
+깃하기
+
+
+깃 설정
+git init
+목록보기 숨긴항목까지 보여주기
+ls -la
+
+
+
+
+깃 환경설정 준비하기
+
+깃허브에 사용자 이름을 준비 
+이름 seohyobin
+이메일 janeseo0530@gmail.com
+비밀번호
+
+깃허브 리파짓토리 주소
+ 오리진
+https://github.com/seohyobin/brando_wedding.git
+
+
+
+사용자이름 등록
+
+사용자.이름
+
+git config user.name 'seohyobin'
+git config user.email 'janeseo0530@gmail.com'
+git remote add origin https://github.com/seohyobin/brando_wedding.git
+
+
+git remote -v
+git remote remove origin
+
+
+푸쉬 (업로드) 창 포트폴리오를 모두 무대에 올린다.
+무대 뒷면에 올린다 스테이징
+
+git add .
+
+커밋하기-> commit -m '브란도 웨딩웹포트폴리오'
+
+
+git commit -m '브란도 웨딩웹포트폴리오'
+
+푸쉬하기 위로 올리기 -> push origin master
+
+git push origin master
+
+
+
+
+깃허브에 브라우저에서 본인의 리차피토리 화면에서 새로고침
+
+그러면 소스가 보인다 포트폴리오
+
+페이징(배포) -> 셋팅 설정 ->좌측화면에 pages->우측에 블랜치
+->master->save-> 1분이상 대기하고있다가 새로고침->상단에 url주소 나옴
+->visit클릭 웹페이지 띄운당!!!!!
+
+
+디버깅
+
+: 깃허브 저장소 (리파지토리) 오리진 마스터에서 가져오기 
+오류부분을 수정하고 다시 푸쉬하기 fetch
+
+git fetch origin master
+
+수정 삭제 추가파일 확인 내용 있으면 로컬영역  현재 수정한 작업영역에
+내용을 리파지토리 내용과 병합한다. pull
+
+merge
+
+git pull origin master
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+깃허브 복제하기(클론하기) clone
+
+https://github.com/seohyobin/brando_wedding_re.git
+
+
+git clone https://github.com/seohyobin/brando_wedding_re.git
+
+
+
+///////////////////////////////////////////////////////////////////////////////

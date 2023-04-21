@@ -1,0 +1,46 @@
+@media all and (max-width: 1170px) {
+  #section5 #wrap #main {
+    padding: 11.11111vw 0;
+  }
+  #section5 #wrap #main .container {
+    width: 100%;
+  }
+  #section5 #wrap #main .container .gap .title {
+    padding: 0 0 6.837607vw 0;
+  }
+  #section5 #wrap #main .container .gap .title h2 {
+    font-size: 2.051282vw;
+  }
+  #section5 #wrap #main .container .gap .content .gallery-box {
+    width: 100.94017094vw;
+    margin: 0 0 0 -0.94017094vw;
+  }
+  #section5 #wrap #main .container .gap .content .gallery-box ul li {
+    float: left;
+    width: 25%;
+  }
+}
+@media all and (max-width: 800px) {
+  #wrap #main #section5 {
+    padding: 11.11111vw 0;
+  }
+  #wrap #main #section5 .container {
+    width: 100%;
+  }
+  #wrap #main #section5 .container .gap .content .gallery-box ul li {
+    float: left;
+    width: 50%;
+  }
+}
+@media all and (max-width: 500px) {
+  #wrap #main #section5 {
+    padding: 11.11111vw 0;
+  }
+  #wrap #main #section5 .container {
+    width: 100%;
+  }
+  #wrap #main #section5 .container .gap .content .gallery-box ul li {
+    float: left;
+    width: 100%;
+  }
+}

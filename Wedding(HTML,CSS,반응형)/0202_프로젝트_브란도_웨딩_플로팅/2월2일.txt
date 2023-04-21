@@ -1,0 +1,28 @@
+figure태그는 블록태그!
+
+
+  width: 100%;
+  max-width: 1170px;->둘이 같이
+
+이게 있으면 반응형!!
+
+
+margin: 0 auto;->가운데 정렬
+
+display: inline-block;->너비와 높이를 가질수있음//어떤 요소를 글자크기만큼 가지려면 이거 사용
+display: inline->너비와 높이 가질슈없음
+
+
+h2{
+                            font-size: 24px;
+                            color: #e15276;
+                            background-color: #93e4cf;
+                            display: inline-block;
+                            position: relative;
+                            &::before{position: absolute;}
+                            &::after{position: absolute;}
+
+                        }->앱솔루트 쓰려면 부모에 렐러티브있어야해
+
+
+display: flex;->

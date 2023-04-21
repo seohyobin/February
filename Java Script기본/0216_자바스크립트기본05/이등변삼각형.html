@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 05 제어문(반복문, 조건문)</title>
+
+    
+</head>
+<body> 
+<!-- <body onLoad ="popup();">  -->
+<!-- <body onLoad ="popup(500,700);">  -->
+
+
+    <style>
+        *{margin: 0 ;padding: 0;vertical-align:middle ; box-sizing: border-box;}
+        ul{list-style: none;}
+        #table1{width: 250px; display: flex;flex-flow: row wrap; margin: 0 auto;}
+        #table1 li {width: 20%; height: 50px;  
+                    display: flex; align-items: center; justify-content: center;
+                    border-top: 1px solid #ccc; 
+                    border-left: 1px solid #ccc;}
+        /* #table1 li:nth-child(even)
+        #table1 li:nth-child(odd) */
+       
+        /* #table1 li:nth-child(5n),
+        #table1 li:nth-child(5*1),
+        #table1 li:nth-child(5*2),
+        #table1 li:nth-child(5*3),
+        #table1 li:nth-child(5*4),
+        #table1 li:nth-child(5*5){border-right: 1px solid #ccc; } */
+
+        #table1 li:nth-child(5n){border-right: 1px solid #ccc; }
+
+        #table1 li:nth-child(21),
+        #table1 li:nth-child(22),
+        #table1 li:nth-child(23),
+        #table1 li:nth-child(24),
+        #table1 li:nth-child(25){border-bottom: 1px solid #ccc; }
+        
+        /* #table1 li:nth-child(n+21), */
+
+        /* #table1 li:nth-child(0+21),
+        #table1 li:nth-child(1+21),
+        #table1 li:nth-child(2+21),
+        #table1 li:nth-child(3+21),
+        #table1 li:nth-child(4+21){border-bottom: 1px solid #ccc; } */
+
+        #table1 li:nth-child(n+21){border-bottom: 1px solid #ccc; }
+    </style>
+
+ <h1>반복문 for(){} 이등변삼각형 알고리즘</h1>
+
+    <div id="root"></div>
+
+    <script>
+        'use strict'
+
+        //테이블 태그 출력
+        //1.돔 컨테이너 생성 : 선택자 #table3
+        //2.1 ~ 25 증가값
+        //3.테이블 안 td에 넣고 출력
+        //4.5행5열
+        //행이 증가하면 열이 안으로 들어간다.
+
+
+        //////알고리즘 문제
+        
+        let cnt= 0;
+        let txt='';
+
+
+        // cnt=0; //값만 초기화 시켜서 사용
+        // txt ='';//값만 초기화 시켜서 사용
+        // for(let i=0; i<=4; i++){
+        //     //줄 시작
+        //     txt +=`<tr>`;
+
+
+        //     for(let j=0; j<=4-i; j++){
+        //     //칸 시작 - 칸 끝
+        //     cnt++;  
+        //     txt+= `<td>${cnt}</td>`;      
+        //     } 
+        //     for(let j=0; j<i; j++){  
+        //         //들여쓰기한 빈칸   
+        //     txt+= `<td></td>`;      
+        //     } 
+            
+        //     txt+= `</tr>`;//줄 끝
+        // }
+
+        // cnt=0; //값만 초기화 시켜서 사용
+        // txt ='';//값만 초기화 시켜서 사용
+        // for(let i=0; i<=4; i++){
+        //     //줄 시작
+        //     txt +=`<tr>`;
+
+        //     for(let j=0; j>i; j++){  
+        //     //들여쓰기한 빈칸   
+        //     txt+= `<td></td>`;      
+        //     } 
+
+
+        //     for(let j=0; j<=4; j++){
+        //     //칸 시작 - 칸 끝
+        //     cnt++;  
+        //     txt+= `<td>${cnt}</td>`;      
+        //     } 
+
+            
+        //     txt+= `</tr>`;//줄 끝
+        // }
+////////////////////////////////////////////////////////////
+        cnt=0; //값만 초기화 시켜서 사용
+        txt ='';//값만 초기화 시켜서 사용
+        for(let i=0; i<=4; i++){
+            //줄 시작
+            txt +=`<tr>`;
+                for(let j=0; j<4-i; j++){  
+                //들여쓰기한 빈칸   
+            txt+= `<td></td>`;      
+            } 
+            
+
+            for(let j=4-i; j<=4; j++){
+            //칸 시작 - 칸 끝
+            cnt++;  
+            txt+= `<td>${cnt}</td>`;      
+            } 
+            txt+= `</tr>`;//줄 끝
+        }
+////////////////////////////////////////////////////////////////////
+        // cnt=0; //값만 초기화 시켜서 사용
+        // txt ='';//값만 초기화 시켜서 사용
+        // for(let i=0; i<=4; i++){
+        //     //줄 시작
+        //     txt +=`<tr>`; 
+        //     for(let j=0; j>=i; j++){
+        //     //칸 시작 - 칸 끝
+        //     cnt++;      
+        //     txt+= `<td>${cnt}</td>`;      
+        //     } 
+        //     for(let j=0; j<; j++){  
+        //         //들여쓰기한 빈칸   
+        //     txt+= `<td></td>`;      
+        //     }
+
+        //     txt+= `</tr>`;//줄 끝
+        // }
+
+
+        
+
+       
+
+
+    //    table.속성(attribute)지정아이디
+    //    table.속성(attribute)지정클래스
+        
+    let table = document.createElement('table');
+    let table2 = document.createElement('table');
+    let table6 = document.createElement('table');
+       //table.setAttribute('속성이름','생성될이름')
+       table.setAttribute('id','table3')
+       table.setAttribute('class','table')
+
+       table.setAttribute('id','table4')
+       table.setAttribute('class','table')
+
+       table.setAttribute('id','table5')
+       table.setAttribute('class','table')
+
+
+        //테이블 생성
+
+        // 크리에이트 create 태그요소 Element(태그이름 table)
+         //아이디 추가하기 클래스 추가하기
+        //돔 컨테이너 #root 에 만들어진 테이블을 포함시킨다.(부착시킨다.)
+        let root = document.getElementById('root');
+
+        root.appendChild(table);
+        root.appendChild(table2);
+        root.appendChild(table3);
+        
+    
+        const table3 = document.getElementById('table3')
+        const table4 = document.getElementById('table3')
+        const table5 = document.getElementById('table3')
+        table3.innerHTML = txt; // 돔 컨테이너에 데이터 넣기 tr td 숫자 입력
+
+            console.log(txt);
+    
+    </script>
+  
+
+    <style>
+        .table{
+            border-collapse:collapse;
+            width: 250px;margin: 50px auto;}
+        .table td{
+            width: 50px; height: 50px;
+            border: 1px solid #ccc; text-align: center;}
+    </style>
+
+
+
+
+</body>
+</html>

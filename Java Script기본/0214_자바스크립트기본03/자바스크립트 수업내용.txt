@@ -1,0 +1,82 @@
+자바스크립트 수업내용
+
+- 변수 선언과 자료형, 연산자
+var
+let
+const
+탬플릿 리터럴 `asksksk ${}`
+덧셈
+뺄셈
+곱셈
+나눗셈
+나머지
+거듭제곱
+String, Number, Boolean, Object(배열, 객체), Undefined
+기본 map 함수 사용 해보기
+배열선언, 2차원 3차원 4차원...
+객체생성 리터럴, 생성자 방식 두가지 const 객체이름 = {}
+객체생성 리터럴, 생성자 방식 두가지 const 객체이름 = new Object();
+[Object Object] => JSON.stringify(); 객체를 문자열로 변환 출력
+
+
+
+- 출력방식
+console.log();
+alert();
+document.write();
+DOM요소.innerHTML = '';  //오늘 추가 내용
+
+
+
+
+- 스크립트 실행 순서와 별렬처리
+헤더영역
+본문영역
+하단영역
+async
+defer
+
+
+- 자바스크립트 실행 방법
+1. 웹페이지
+2. 콘솔로그
+3. Node.js  node  ./js/파일이름.js
+3. Node.js  node  파일이름.js
+
+
+
+
+- 날짜객체와 수학객체
+수학객체 Math.round()
+반올림, round()
+자리올림 ceil()
+자리내림 floor()
+
+날짜 객체
+표준시
+시
+분
+초
+타이머
+년
+월
+일
+
+
+
+
+제어문
+
+반복문
+for()
+map()
+forEach()
+forIn()
+
+
+조건문
+if()
+switch case
+
+
+

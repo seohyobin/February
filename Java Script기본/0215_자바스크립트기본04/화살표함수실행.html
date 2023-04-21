@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표함수</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        //1.함수를 선언해서 만들고
+        //2.함수를 호출해야만 실행
+        //3.선언적함수는 함수의 위 아래 어디서든지 호출실행가능
+        //4.익명함수는 함수의 아래에서만 호출실행가능
+
+
+        const 함수1 = (pa1,pa2)  => { // 매개변수
+            console.log('함수1 내부 파라미타값 출력',pa1,pa2); //리턴이 필요없이 함수 안에서 바로 결과 출력
+        }
+
+
+        함수1( 9, 99 ); //아규먼트 (전달인자)
+        //아래는 모두 리턴 결과
+
+
+        //결과를 되돌려 받을 때 리턴 필요하다.
+        const 함수2 =(pa)=>{
+            return pa +100; 
+        }
+        console.log('함수밖에서 결과출력',함수2(9));
+
+        //한줄코딩의 화살표함수는 즉시 리턴이 이루어진다.
+        //블럭을 생략하고, 리턴문을 생략하여 한 줄로 표기, 사용가능하다.
+        const 함수3 = (pa) => pa+100;
+        console.log('함수밖에서 결과출력',함수3(9));
+
+        //파라미터가 1개인 경우는 괄호()를 생략가능하다.
+        //단, 파라미터가 2개 이상일 경우는 반드시 소괄호로 사용한다.
+        const 함수4 = pa => pa+100;
+        console.log('함수밖에서 결과출력',함수4(9));
+
+        //프로미스 비동기처리할때는 반드시 화살표함수 사용한다.
+
+        //배열,객체,함수
+
+        const obj1 ={상품코드:'PRODUCT0001', 상품명:'딸기', 가격:25000}
+        
+        function 상품( obj1 ){
+            console.log(obj1.상품코드);
+            console.log(obj1.상품명);
+            console.log(obj1.가격);
+        }
+        상품(obj1);
+
+        
+        function 상품2( obj1 ){
+            const {상품코드,상품명,가격}= obj1; //비구조화 =>구조분할할당
+            console.log( 상품코드 );
+            console.log( 상품명 );
+            console.log( 가격 );
+        }
+        상품2(obj1);
+        //상품 2 화살표함수로 변경
+        // const 상품2=( obj1 )=>{
+        //     const {상품코드,상품명,가격}= obj1; //비구조화 =>구조분할할당
+        //     console.log( 상품코드 );
+        //     console.log( 상품명 );
+        //     console.log( 가격 );
+        // }
+        // 상품2(obj1);
+
+        const 상품3=( {상품코드,상품명,가격} )=>{ //비구조화
+            console.log('매개변수에서 비구조화', 상품코드 );
+            console.log('매개변수에서 비구조화', 상품명 );
+            console.log('매개변수에서 비구조화', 가격 );
+        }
+        상품3(obj1);
+
+
+        // 화살표함수 이용해서 배열 값 검색
+        const arr =['딸기','귤','사과','체리'];
+        //map 함수는 여러개의 데이터를 처리할때 사용->4개의 방 꺼내서 비교한다
+        //const result = 배열이름.map(function(){});
+        //const result = 배열이름.map((item)=>item==='체리');//중괄호를 빼면 즉시 리턴
+        const result = arr.map((item)=>item==='체리');//중괄호를 빼면 즉시 리턴
+        console.log(result);
+        //결과 result[false, false, false, true];
+        console.log(result.includes(true) ? '찾았당':'없당');
+        console.log(result.includes(true) ? true : false);
+
+        //배열안에맵함수를 이용 체리를 찾으면 true 아니면 false를 반환
+        //비교연산자 이용 === >= <= ><  !== 같지않다. 논리값 true 또는 false
+        //배열안에 특정한 글자 포함된거 비교
+
+    </script>
+</body>
+</html>

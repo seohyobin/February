@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 변수(식별자) 자료형 배열 객체 형변환 JSON,stringify()</title>
+</head>
+<body>
+    
+    <script>
+        'use strict' //자바스크립트 사용 엄격한 모드 실행->변수 값 있어도 오류를 잡음
+        // var 가변변수 식별자  _ $  userId
+        // var a=10;
+        //var 이름='이순신';
+        //var 이름='김유신';
+        // let 이름='유관순';
+        // let 이름='유관순';
+        // let 가변변수 재선언 지정 불가
+        // const 불변변수 재선언 지정 불가
+
+
+       // alert('자바스크립트 경고창');
+        console.log('자바스크립트 콘솔 로그 출력');
+        document.write('웹문서 내에 출력');
+        document.write('<h1>웹문서 내에 해당 태그 출력</h1>');
+
+        //txt;//not defined 변수선언안함 var let const 키워드를 선언안한상태
+              //변수 값도 대입안한상태
+              //그래서 오류가 발생
+              //변수값을 대입하면 오류발생 안함. 느슨한 형태의 자바스크립트
+              //이걸 보완하기 위해서 strict 모드 사용 맨 위에'use strict'
+
+        let txt ='바보'; //not defined 변수선언안함 var let const 키워드를 선언
+
+        let txt1 ; //아무런 값도 지정 (지정 설정 대입)안함 undefined
+        let txt2 = '';
+        let txt3 = 0;
+        let txt4 = null;
+        let txt5 = true;
+        const txt6 = '이순신';
+
+        txt ='바보 babo 변수값 수정';
+        txt1 ='변수값 수정';
+        txt2 ='변수값 수정 문자열';
+        txt3 ='숫자(Number) 변수인데 변수값 수정 문자열';
+        txt4 ='null 변수인데 변수값 수정 문자열';
+        txt5 ='뷸(Boolean) 변수인데 변수값 수정 문자열';
+        //'txt6 ='문자열(String) 변수인데 변수값 수정 문자열';-> 오류발생 불변변수 변경 불가능
+        
+        //ES5
+        //문자열 +(연결연산자) 변수
+
+        console.log(`txt1`+ txt1);//undefined
+       
+        //ES6
+        //탬플릿 리터럴
+        
+        console.log(`txt ${txt}`);//Uncaught ReferenceError: txt is not defined 변수선언안함
+        console.log(`txt1 ${txt1}`); //undefined
+        console.log(`txt2 ${txt2}`);
+        console.log(`txt3 ${txt3}`);
+        console.log(`txt4 ${txt4}`);
+        console.log(`txt5 ${txt5}`);
+        console.log(`txt6 ${txt6}`);
+        
+
+
+        //연산자
+       //  +
+       //  -
+       //  *
+       //  /
+       //  %
+       //  **
+       //자바스크립트 모두 수치가 부동소수점형식으로 사용
+
+       let a=899.998; //Number
+       let b=50;
+       let c;
+       console.log(`c=a+b  ${a+b}=${a}+${b}`)
+       console.log(`c=a-b  ${a-b}=${a}-${b}`)
+       console.log(`c=a*b  ${a*b}=${a}*${b}`)
+       console.log(`c=a/b  ${a/b}=${a}/${b}`)
+       console.log(`c=a%b  ${a%b}=${a}%${b}`)
+       console.log(`c=a**b  ${a**b}=${a}**${b}`)
+
+
+    //    let arr = []; //Array
+    //    let obj = {}; //object 
+
+       
+       let arr = []; //Array 1차원(행번호)
+       arr[0] = []; //Array 2차원배열 선언 행열
+       arr[0][0] = []; //Array 3차원배열 선언 면 행열
+       arr[0][0][0] = []; //Array 4차원배열 선언 면 면 행열
+       
+       let obj = {}; //object 
+
+       arr = ['사과','바나나','체리','딸기','자몽',98];
+       console.log(` 배열 ${arr}` );
+       console.log(` 배열 arr. length ${arr.length}` ); //6 0~5
+       console.log(` 배열 arr[인덱스번호 0-5]` );
+       console.log(` 배열 arr[0] ${arr[0]}` );
+       console.log(` 배열 arr[1] ${arr[1]}` );
+       console.log(` 배열 arr[2] ${arr[2]}` );
+       console.log(` 배열 arr[3] ${arr[3]}` );
+       console.log(` 배열 arr[4] ${arr[4]}` );
+       console.log(` 배열 arr[5] ${arr[5]}` );
+
+       //반복문 배열 출력
+       //배열이름.맵함수();
+       arr.map(function(val,idx,arr){ //매개변수 a(값), b(인덱스), c(배열 Array)
+        console.log(idx, val);
+        console.log(arr);
+       });
+
+       // for(변수=시작값0;변수= 종료값5; 변수++ +=2증감값->step){함수, 반복문 실행범위블록 스코프}
+       for(let i=0; i<=5; i++ ){
+        console.log( `arr[${i}] ${arr[i]}` ); //arr[0]
+       }
+       for(let i=0; i<arr.length; i++ ){ //i < 6
+        console.log( `arr[${i}] ${arr[i]}` ); //arr[0]
+       }
+
+       // 자료형 중 가장 중요한 자료형
+       // 속성 : 값 한 쌍으로 이루어진 형태
+       // 키(Key): 값(Value) 한 쌍으로 이루어진 형태
+       //ex.국어(키) : 89(값)
+       //객체 리터럴 방식
+       //let(const) obj = new object() //생성자 방식
+       //let(const) obj = {}
+       //블럭법 콜런: 콤마, 
+       let newObject = new Object() //생성자 방식
+       newObject={
+        회원:[
+            {번호 : 1, 이름: '이순신'},
+            {번호 : 2, 이름: '이순신'},
+            {번호 : 3, 이름: '이순신'},
+            {번호 : 4, 이름: '이순신'}
+        ]
+       }
+       obj = {
+        이름:'이순신', //이름 키(key)= 항목(item)= 필드(Field)= 속성 (property, properties) : 값(value)
+        국어: 89,
+        영어: 99,
+        수학: 98,
+        //속성뒤에 function(){}이 있으면 매서드(method)라 칭한다.(함수)
+        // 총점: function(){
+        //     console.log(`총점 ${this.국어+this.영어+this.수학}`);
+        // },
+        // 평균: function(){
+        //     console.log(`평균 ${(this.국어+this.영어+this.수학)/3}`);
+        // }
+        총점(){ //매서드(액션 동작) 함수()
+            //let 이름 = z;
+            return this.국어+this.영어+this.수학;
+        },
+        평균(){
+            return Math.round((this.국어+this.영어+this.수학)/3); //Math.round() //반올림round()
+            return Math.floor((this.국어+this.영어+this.수학)/3); //Math.floor() //자리내림roundDown()
+            return Math.cell((this.국어+this.영어+this.수학)/3); //Math.cell() //자리올림roundUp()
+        }
+        
+        
+       }
+
+       obj.총점(obj.이름);
+    
+    //    class Math{
+    //     round(){
+    //         return 반환값;
+    //     }
+    //    }
+
+
+       //객체이름.속성 //속성을 사용하면 값이 보여준다.
+
+       console.log( obj );
+       console.log( `obj = ${obj}` ); //객체형태를 문자열로 변환
+       console.log( `obj = ${JSON.stringify(obj)}` );
+       console.log( `obj . 이름 = ${obj.이름}` ); //객체이름 . 속성이름 
+       console.log( `obj . 국어 = ${obj.국어}` ); //객체이름 . 속성이름 
+       console.log( `obj . 영어 = ${obj.영어}` ); //객체이름 . 속성이름 
+       console.log( `obj . 수학 = ${obj.수학}` ); //객체이름 . 속성이름 
+       console.log( `obj . 수학 = ${obj.총점}` ); //객체이름 . 속성이름 
+       console.log( `obj . 수학 = ${obj.평균}` ); //객체이름 . 속성이름 
+
+       //객체2
+       const wedding = {
+        init: function(){
+            this.header();
+            this.section1();
+            this.section2();
+            this.section3();
+            this.footer();
+
+        },
+        header: function(){
+            console.log('header');
+        },
+        section1: function(){
+            console.log('section1');
+        },  
+        section2: function(){
+            console.log('section2');
+        },
+        section3: function(){
+            console.log('section3');
+            const 회원 = {
+                이름:'이순신',
+                이메일:'seohyobin2@gmail.com',
+                핸드폰:'01012345678'
+            }
+        },
+            // $.ajax({
+            // url:'./insert.php',
+            // typr:'post',
+            // data: 회원,
+            // success : function(res){
+            // console.log(res);
+            //     //location.href=index.html
+            // },
+            // error : function(err){
+            //     console.log(err);
+            // }
+            // });
+    
+        footer: function(){
+            console.log('footer');
+        }
+       }
+       
+       wedding.init();
+       let n = 150000;
+
+       //자료형 문자열, 숫자, 불, undefined, 배열, 객체 ...
+       //'',""인용구 들어가면 문자로 인식
+       console.log(typeof '우리나라') ;//string
+       console.log(typeof 'design') ;//string
+       console.log(typeof 'backend') ;//string
+       console.log(typeof '이순신') ;//string
+       console.log(Number ('12345665') ) ;//string->Number
+       console.log(typeof 'object') ;//string
+       console.log(typeof 'array') ;//string
+       console.log(typeof ['사과' , '딸기']) ;//object
+       console.log(typeof arr) ;//object
+       console.log(typeof obj) ;//object
+
+       console.log( n) ;//숫자-> 파란색으로 나타남
+       console.log( n.toString()) ;//숫자->문자열 string 검은색
+       console.log( typeof n.toString()) ;//숫자->문자열 string타입
+
+       console.log(typeof 869859589) ;//number
+       console.log(typeof 89) ;//number
+       console.log(typeof 150.678) ;//number
+       console.log(typeof 150.678) ; //number
+       console.log(typeof true) ;//boolean
+       console.log(typeof false) ; //boolean
+       console.log(typeof undefined) ;//undefined
+
+       const obj2 = {
+            회원:{
+                아이디:'baboda',
+                이름:'안녕',
+                이메일:'hello@naver.com',
+                취미:['음악','드라마','영화']
+                
+            },
+            성적표:[
+                {번호:1,이름:'이순신',점수:99},
+                {번호:2,이름:'김김김',점수:89},
+                {번호:3,이름:'박박박',점수:98},
+                {번호:4,이름:'이이이',점수:85},
+                {번호:5,이름:'정정정',점수:79},
+            ]
+
+            
+       }
+
+       console.log( obj2 );
+       console.log( obj2. 회원);
+      // console.log( obj2. 성적표);
+
+       obj2.성적표.map(function(item, idx){
+        console.log(item.번호,item.이름,item.점수);
+        document.write(`<p style='text-align:center;color:#33c'>${item.번호},${item.이름},${item.점수}</p>`);
+       });
+    </script>
+</body>
+</html>
